@@ -3,6 +3,39 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
+const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (mobileMenuButton && mobileMenu) {
+  const setMobileMenuOpen = (isOpen) => {
+    mobileMenu.classList.toggle("hidden", !isOpen);
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+
+    const icon = mobileMenuButton.querySelector("[data-lucide]");
+    if (icon) {
+      icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+  };
+
+  mobileMenuButton.addEventListener("click", () => {
+    setMobileMenuOpen(mobileMenu.classList.contains("hidden"));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileMenuOpen(false));
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      setMobileMenuOpen(false);
+    }
+  });
+}
+
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {

@@ -92,6 +92,19 @@ tailwind.config = {
       <a href="#contato" class="hover:text-primary transition-colors">Contato</a>
     </nav>
     <a href="#contato" class="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition">Fale Conosco</a>
+    <button id="mobileMenuButton" type="button" class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-foreground transition hover:bg-accent" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+      <i data-lucide="menu" class="icon"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden border-t border-border bg-white md:hidden">
+    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 text-base font-semibold sm:px-6">
+      <a href="#areas-atuacao" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Áreas de Atuação</a>
+      <a href="#servicos" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Serviços</a>
+      <a href="#sobre" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Sobre</a>
+      <a href="#parceiros" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Parceiros</a>
+      <a href="#contato" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Contato</a>
+      <a href="#contato" class="mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90">Fale Conosco</a>
+    </nav>
   </div>
 </header>
 
