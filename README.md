@@ -18,11 +18,7 @@ https://iagodavila.github.io/site-scherr-quimica/
 
 ## 📸 Preview
 
-> Adicione um print do projeto nesta seção.
-
-```md
-![Preview](./assets/images/preview.png)
-```
+![Demonstração do site Scherr Química](./assets/comparaçao-video.gif)
 
 ---
 
