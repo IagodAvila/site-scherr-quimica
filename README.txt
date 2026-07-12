@@ -1,99 +1,138 @@
-🧪 Scherr Química
+# 🧪 Scherr Química
 
-<p align="center"> <img src="https://img.shields.io/badge/Frontend-Project-0A66C2?style=for-the-badge" alt="Frontend Project"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"> <img src="https://img.shields.io/badge/Responsive-Mobile%20First-success?style=for-the-badge" alt="Responsive"> <img src="https://img.shields.io/badge/UI%2FUX-Focused-blueviolet?style=for-the-badge" alt="UI/UX"> </p>
+![Frontend Project](https://img.shields.io/badge/Frontend-Project-0A66C2?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-success?style=for-the-badge)
+![UI/UX](https://img.shields.io/badge/UI%2FUX-Focused-blueviolet?style=for-the-badge)
 
-<p align="center"> <strong>Website institucional desenvolvido para a Scherr Química, com foco em presença digital, apresentação da empresa e experiência do usuário.</strong> </p>
+> Website institucional desenvolvido para a **Scherr Química**, com foco em fortalecer sua presença digital por meio de uma interface moderna, responsiva e intuitiva.
 
-<p align="center"> <a href="https://iagodavila.github.io/site-scherr-quimica/" target="_blank"> <img src="https://img.shields.io/badge/🌐%20Visualizar%20Projeto-Online-2ea44f?style=for-the-badge" alt="Projeto Online"> </a> </p>
+## 🌐 Demonstração
 
-📸 Adicione uma captura de tela ou GIF do projeto nesta seção.
+**🔗 Projeto Online:**  
+https://iagodavila.github.io/site-scherr-quimica/
 
-<p align="center">
-  <img src="./assets/images/preview.png" alt="Preview da Scherr Química" width="100%">
-</p>
-📖 Sobre o Projeto
+---
 
-O Scherr Química é um website institucional desenvolvido para fortalecer a presença digital da empresa, apresentando seus serviços, diferenciais e canais de contato por meio de uma interface moderna, responsiva e intuitiva.
+## 📸 Preview
+
+> Adicione um print do projeto nesta seção.
+
+```md
+![Preview](./assets/images/preview.png)
+```
+
+---
+
+## 📖 Sobre o Projeto
+
+O **Scherr Química** é um website institucional desenvolvido para apresentar a empresa, seus serviços, diferenciais e canais de contato de forma clara e profissional.
 
 O projeto foi desenvolvido priorizando desempenho, acessibilidade, organização do código e uma experiência consistente em diferentes dispositivos, garantindo uma navegação simples e eficiente para os visitantes.
 
-✨ Funcionalidades
-✅ Página inicial institucional
-✅ Apresentação da empresa
-✅ Seção de serviços
-✅ Seção "Sobre"
-✅ Informações de contato
-✅ Botões de chamada para ação (CTA)
-✅ Navegação fluida entre as seções
-✅ Layout totalmente responsivo
-✅ Interface moderna e intuitiva
-🚀 Demonstração
+---
 
-Acesse o projeto online:
+## ✨ Funcionalidades
 
-🔗 https://iagodavila.github.io/site-scherr-quimica/
+- ✅ Página inicial institucional
+- ✅ Apresentação da empresa
+- ✅ Seção de serviços
+- ✅ Seção Sobre
+- ✅ Informações de contato
+- ✅ Botões de chamada para ação (CTA)
+- ✅ Navegação fluida entre as seções
+- ✅ Interface moderna
+- ✅ Layout totalmente responsivo
 
-🛠️ Tecnologias Utilizadas
-HTML5
-CSS3
-JavaScript (ES6+)
-Git
-GitHub
-GitHub Pages
-📱 Responsividade
+---
 
-O website foi desenvolvido seguindo os princípios do Responsive Web Design, oferecendo uma experiência consistente em diferentes resoluções.
+## 🛠️ Tecnologias Utilizadas
 
-Compatível com:
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Git
+- GitHub
+- GitHub Pages
 
-📱 Smartphones
-📲 Tablets
-💻 Notebooks
-🖥️ Monitores Desktop
-📂 Estrutura do Projeto
+---
+
+## 📱 Responsividade
+
+Desenvolvido seguindo os princípios de **Responsive Web Design**, proporcionando uma experiência consistente em diferentes dispositivos.
+
+- 📱 Smartphones
+- 📲 Tablets
+- 💻 Notebooks
+- 🖥️ Desktop
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
 📦 site-scherr-quimica
 ├── assets
 │   ├── css
-│   ├── js
 │   ├── images
+│   ├── js
 │   └── icons
 ├── index.html
 └── README.md
-🚀 Como Executar
+```
+
+---
+
+## 🚀 Como Executar
 
 Clone o repositório:
 
+```bash
 git clone https://github.com/IagodAvila/site-scherr-quimica.git
+```
 
-Entre na pasta do projeto:
+Entre na pasta:
 
+```bash
 cd site-scherr-quimica
+```
 
-Abra o arquivo index.html no navegador ou utilize a extensão Live Server do Visual Studio Code.
+Abra o arquivo **index.html** em seu navegador ou utilize a extensão **Live Server** do Visual Studio Code.
 
-🎯 Destaques do Desenvolvimento
+---
 
-Durante o desenvolvimento deste projeto foram aplicadas boas práticas como:
+## 🎯 Destaques do Desenvolvimento
 
-Estruturação semântica com HTML5
-CSS moderno e organizado
-JavaScript para interatividade
-Design responsivo (Mobile First)
-Organização de arquivos
-Código limpo e de fácil manutenção
-Boas práticas de UI/UX
-Versionamento com Git
-Publicação utilizando GitHub Pages
-👨‍💻 Desenvolvedor
+Durante o desenvolvimento foram aplicadas boas práticas como:
 
-Iago D'Ávila
+- HTML5 semântico
+- CSS moderno (Flexbox e Grid)
+- JavaScript para interatividade
+- Design Responsivo (Mobile First)
+- Organização de arquivos
+- Código limpo e de fácil manutenção
+- Boas práticas de UI/UX
+- Versionamento com Git
+- Deploy utilizando GitHub Pages
+
+---
+
+## 👨‍💻 Desenvolvedor
+
+**Iago D'Ávila**
 
 📧 iago.davila.dev@gmail.com
 
-🔗 GitHub: https://github.com/IagodAvila
+**GitHub**  
+https://github.com/IagodAvila
 
-🔗 LinkedIn: https://www.linkedin.com/in/iago-davila-dev/
+**LinkedIn**  
+https://www.linkedin.com/in/iago-davila-dev/
 
-📄 Licença
+---
 
-Este repositório foi disponibilizado exclusivamente para demonstração do projeto desenvolvido. Todos os direitos relacionados à identidade visual, marca e conteúdo pertencem à Scherr Química.
+## 📄 Licença
+
+Este repositório foi disponibilizado para demonstrar o desenvolvimento do projeto. A identidade visual, a marca e os conteúdos apresentados pertencem à **Scherr Química**.
