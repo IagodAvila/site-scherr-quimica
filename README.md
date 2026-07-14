@@ -9,6 +9,15 @@
 
 > Website institucional desenvolvido para a **Scherr Química**, com foco em fortalecer sua presença digital por meio de uma interface moderna, responsiva e intuitiva.
 
+## 🚀 Status do Projeto
+
+Este projeto foi desenvolvido para um cliente real.
+
+✅ Desenvolvimento concluído  
+⏳ A implementação/publicação oficial pelo cliente ainda está pendente.
+
+A versão disponível neste repositório representa o trabalho entregue e pode sofrer pequenas diferenças em relação à versão que será publicada pelo cliente.
+
 ## 🌐 Demonstração
 
 **🔗 Projeto Online:**  
