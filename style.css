@@ -25,6 +25,49 @@ body {
   transform: scale(1.05);
 }
 
+.partner-logo-card {
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2eee6;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px -4px rgba(30, 122, 77, 0.1);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.partner-logo-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 20px 40px -24px rgba(30, 122, 77, 0.32);
+}
+
+.partner-logo {
+  display: block;
+  height: 3.5rem;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.partner-logo-teksid {
+  width: 18.5rem;
+  height: 18.5rem;
+  max-width: none;
+}
+
+/* As marcas GE e Imbel usam arquivos mais compactos, com proporções e margens
+   distintas das logos horizontais. A escala compensa essa área vazia. */
+.partner-logo-ge {
+  height: 10rem;
+}
+
+.partner-logo-imbel {
+  height: 12rem;
+}
+
 .icon {
   width: 1em;
   height: 1em;
