@@ -68,6 +68,12 @@ body {
   height: 12rem;
 }
 
+/* Estes arquivos incluem áreas brancas ao redor da marca; a escala compensa
+   esse espaço para igualar visualmente os demais logos. */
+.partner-logo-comigo {
+  height: 4.75rem;
+}
+
 .icon {
   width: 1em;
   height: 1em;
