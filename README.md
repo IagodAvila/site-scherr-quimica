@@ -27,7 +27,7 @@ https://iagodavila.github.io/site-scherr-quimica/
 
 ## 📸 Preview
 
-![Demonstração do site Scherr Química](./assets/comparaçao-video.gif)
+![Demonstração do site Scherr Química](./docs/comparacao-video.gif)
 
 ---
 
@@ -56,7 +56,7 @@ O projeto foi desenvolvido priorizando desempenho, acessibilidade, organização
 ## 🛠️ Tecnologias Utilizadas
 
 - HTML5
-- CSS3
+- CSS3 + Tailwind CSS (build estático via CLI, sem CDN)
 - JavaScript (ES6+)
 - Git
 - GitHub
@@ -79,12 +79,15 @@ Desenvolvido seguindo os princípios de **Responsive Web Design**, proporcionand
 
 ```text
 📦 site-scherr-quimica
-├── assets
-│   ├── css
-│   ├── images
-│   ├── js
-│   └── icons
+├── assets/              # imagens, favicons e o CSS gerado pelo Tailwind (app.css)
+├── docs/                # material de apoio ao repositório (gif de demonstração)
+├── src/input.css        # entrada do build do Tailwind
 ├── index.html
+├── privacidade.html      # rascunho de política de privacidade (LGPD)
+├── 404.html              # página de erro customizada (GitHub Pages)
+├── script.js
+├── style.css             # overrides manuais além do Tailwind
+├── tailwind.config.js
 └── README.md
 ```
 
@@ -105,6 +108,42 @@ cd site-scherr-quimica
 ```
 
 Abra o arquivo **index.html** em seu navegador ou utilize a extensão **Live Server** do Visual Studio Code.
+
+### Alterando estilos (Tailwind)
+
+O CSS não é mais gerado via CDN em tempo de execução — ele é compilado para `assets/app.css` e commitado no
+repositório, para o site continuar 100% estático no GitHub Pages. Sempre que uma classe do Tailwind for
+adicionada/alterada em algum `.html`, rode:
+
+```bash
+npm install      # só na primeira vez
+npm run build:css
+```
+
+Durante o desenvolvimento, `npm run watch:css` recompila automaticamente a cada alteração.
+
+### Formulário de contato
+
+O envio continua via `mailto:`: ao submeter, o navegador abre o cliente de e-mail do visitante com os dados já
+preenchidos, direcionado para `scherr@scherr.com.br`. Isso não depende de nenhum serviço externo, mas só
+funciona se o dispositivo do visitante tiver um cliente de e-mail configurado. Se no futuro alguém com acesso
+ao e-mail `scherr@scherr.com.br` quiser um envio mais confiável (sem depender do cliente de e-mail do
+visitante), dá pra integrar um serviço gratuito como o [Web3Forms](https://web3forms.com), que só exige gerar
+uma *Access Key* pelo próprio e-mail da empresa.
+
+### Imagens
+
+O hero e os banners das seções de Serviços, Sobre e Parceiros usam fotos de banco gratuito
+([Pexels](https://www.pexels.com), licença livre para uso comercial, sem exigência de atribuição) como
+**placeholder genérico** — nenhuma delas retrata a fábrica, o laboratório ou a equipe reais da Scherr Química.
+Assim que houver fotos reais da empresa disponíveis, elas devem substituir esses arquivos em `assets/`:
+
+| Arquivo | Onde é usada |
+|---|---|
+| `assets/hero-water-treatment.jpg` | Hero (topo da página) |
+| `assets/about-industrial-valves.jpg` | Fundo do card "Nossa missão" (Sobre) |
+| `assets/services-lab-testing.jpg` | Banner da seção Serviços |
+| `assets/partners-water-drop.jpg` | Banner da seção Parceiros |
 
 ---
 

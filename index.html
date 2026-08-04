@@ -12,16 +12,20 @@
 <meta property="og:description" content="Produtos químicos e assistência técnica para tratamento de água industrial, caldeiras, torres de resfriamento, água gelada e efluentes." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scherr.com.br/" />
-<meta property="og:image" content="https://scherr.com.br/assets/hero-water.jpg" />
+<meta property="og:image" content="https://scherr.com.br/assets/hero-water-treatment.jpg" />
 <meta property="og:image:alt" content="Tratamento de água industrial da Scherr Química" />
 <meta property="og:site_name" content="Scherr Química" />
 <meta property="og:locale" content="pt_BR" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Scherr Química | Tratamento de Água Industrial" />
 <meta name="twitter:description" content="Produtos químicos e assistência técnica para tratamento de água industrial em Nova Lima, MG." />
-<meta name="twitter:image" content="https://scherr.com.br/assets/hero-water.jpg" />
+<meta name="twitter:image" content="https://scherr.com.br/assets/hero-water-treatment.jpg" />
 <meta name="twitter:image:alt" content="Tratamento de água industrial da Scherr Química" />
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
 <link rel="canonical" href="https://scherr.com.br/" />
 <script type="application/ld+json">
 {
@@ -43,8 +47,8 @@
       "@id": "https://scherr.com.br/#organization",
       "name": "Scherr Química Ltda",
       "alternateName": "Scherr",
-      "image": "https://scherr.com.br/assets/Logo%20Scherr%20-%20PNG_Horizontal.png",
-      "logo": "https://scherr.com.br/assets/Logo%20Scherr%20-%20PNG_Horizontal.png",
+      "image": "https://scherr.com.br/assets/logo-scherr-horizontal.png",
+      "logo": "https://scherr.com.br/assets/logo-scherr-horizontal.png",
       "url": "https://scherr.com.br/",
       "telephone": "+55 31 3297-6161",
       "email": "scherr@scherr.com.br",
@@ -65,37 +69,10 @@
   ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#ffffff',
-        foreground: '#0e1a14',
-        card: '#ffffff',
-        'card-foreground': '#0e1a14',
-        primary: { DEFAULT: '#1e7a4d', foreground: '#ffffff' },
-        secondary: { DEFAULT: '#eef7f1', foreground: '#274c3a' },
-        muted: { DEFAULT: '#eef7f1', foreground: '#5d6f65' },
-        accent: { DEFAULT: '#d6ecdd', foreground: '#274c3a' },
-        border: '#e2eee6',
-        ring: '#1e7a4d',
-      },
-      boxShadow: {
-        elegant: '0 20px 60px -20px rgba(30,122,77,.25)',
-        card: '0 4px 20px -4px rgba(30,122,77,.1)',
-      },
-      backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg,#1e7a4d 0%,#3aae74 100%)',
-      },
-    }
-  }
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/app.css" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-background text-foreground">
@@ -104,7 +81,7 @@ tailwind.config = {
 <header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-border">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-2" aria-label="Scherr Química - Início">
-      <img src="assets/Logo%20Scherr%20-%20PNG_Horizontal.png" alt="Scherr Química" class="h-14 w-auto" />
+      <img src="assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-14 w-auto" />
     </a>
     <nav class="hidden md:flex items-center gap-8 text-base font-bold">
       <a href="#areas-atuacao" class="header-nav-link hover:text-primary">Áreas de Atuação</a>
@@ -131,8 +108,8 @@ tailwind.config = {
 </header>
 
 <!-- Hero -->
-<section id="top" class="relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+<section id="top" class="relative overflow-hidden min-h-[calc(100vh-4rem)] flex items-center">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center w-full">
     <div>
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold mb-6">
         <i data-lucide="shield-check" class="icon"></i> Nova Lima, MG
@@ -159,7 +136,7 @@ tailwind.config = {
     </div>
     <div class="relative">
       <div class="absolute -inset-4 bg-gradient-hero opacity-20 blur-3xl rounded-3xl"></div>
-      <img src="assets/hero-water.jpg" alt="Sistema industrial de tratamento de água" width="1536" height="1024" class="relative rounded-2xl shadow-elegant w-full h-auto object-cover" />
+      <img src="assets/hero-water-treatment.jpg" alt="Vista aérea de tanques de tratamento de água industrial" width="1400" height="933" fetchpriority="high" class="relative rounded-2xl shadow-elegant w-full h-auto object-cover" />
     </div>
   </div>
 </section>
@@ -189,7 +166,7 @@ tailwind.config = {
       </article>
       <article class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
         <div class="grid place-items-center h-12 w-12 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="droplets" class="icon" style="font-size:1.5rem"></i>
+          <i data-lucide="snowflake" class="icon" style="font-size:1.5rem"></i>
         </div>
         <h3 class="mt-5 text-lg font-semibold">Tratamento de Água e Resfriamento</h3>
         <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Soluções completas em produtos químicos e assistência técnica para tratamento de água industrial, resfriamento e geração de água gelada.</p>
@@ -226,6 +203,9 @@ tailwind.config = {
       <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Serviços</p>
       <h2 class="text-3xl sm:text-4xl font-bold">Soluções técnicas para cada etapa do seu processo</h2>
       <p class="mt-4 text-muted-foreground">Da análise inicial à execução e suporte contínuo, entregamos serviços com foco em eficiência, segurança e preservação de equipamentos.</p>
+    </div>
+    <div class="mb-10 rounded-2xl overflow-hidden shadow-card">
+      <img src="assets/services-lab-testing.jpg" alt="Amostras de água em análise no laboratório" width="1600" height="480" loading="lazy" class="w-full h-48 sm:h-64 object-cover" />
     </div>
     <div class="grid lg:grid-cols-2 gap-6">
       <div class="bg-card border border-border rounded-2xl p-6 shadow-card">
@@ -282,17 +262,21 @@ tailwind.config = {
         <div class="bg-secondary/50 rounded-xl p-4 text-center"><div class="text-2xl font-bold text-primary">NSF</div><div class="text-xs text-muted-foreground mt-1">Empresa certificada</div></div>
       </div>
     </div>
-    <div class="bg-gradient-hero rounded-2xl p-10 text-primary-foreground shadow-elegant">
-      <h3 class="text-2xl font-bold">Nossa missão</h3>
-      <p class="mt-4 opacity-95 leading-relaxed">
-        Garantir a eficiência operacional e o aumento da vida útil dos equipamentos dos nossos clientes através de soluções químicas seguras e ambientalmente responsáveis.
-      </p>
-      <div class="mt-8 space-y-3">
-        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Qualidade comprovada</div>
-        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Certificação NSF</div>
-        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Laboratório químico próprio</div>
-        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Projetos sob medida</div>
-        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Agilidade no atendimento</div>
+    <div class="relative rounded-2xl overflow-hidden shadow-elegant">
+      <img src="assets/about-industrial-valves.jpg" alt="" aria-hidden="true" width="1200" height="900" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-hero opacity-90"></div>
+      <div class="relative p-10 text-primary-foreground">
+        <h3 class="text-2xl font-bold">Nossa missão</h3>
+        <p class="mt-4 opacity-95 leading-relaxed">
+          Garantir a eficiência operacional e o aumento da vida útil dos equipamentos dos nossos clientes através de soluções químicas seguras e ambientalmente responsáveis.
+        </p>
+        <div class="mt-8 space-y-3">
+          <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Qualidade comprovada</div>
+          <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Certificação NSF</div>
+          <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Laboratório químico próprio</div>
+          <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Projetos sob medida</div>
+          <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="icon"></i> Agilidade no atendimento</div>
+        </div>
       </div>
     </div>
   </div>
@@ -305,6 +289,9 @@ tailwind.config = {
       <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Parceiros</p>
       <h2 class="text-3xl sm:text-4xl font-bold">Empresas e indústrias que confiam na Scherr</h2>
       <p class="mt-4 text-muted-foreground">Atuamos ao lado de clientes de diferentes segmentos, entregando soluções técnicas e confiáveis para manter processos mais seguros e eficientes.</p>
+    </div>
+    <div class="mb-10 rounded-2xl overflow-hidden shadow-card">
+      <img src="assets/partners-water-drop.jpg" alt="Gota d'água formando ondulações na superfície" width="1600" height="640" loading="lazy" class="w-full h-48 sm:h-64 object-cover" />
     </div>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-card border border-border rounded-2xl p-6 shadow-card">
@@ -368,27 +355,31 @@ tailwind.config = {
       </div>
       <form id="contactForm" class="min-w-0 bg-card border border-border rounded-2xl p-5 sm:p-8 shadow-card space-y-4">
         <div>
-          <label class="text-sm font-medium">Nome *</label>
-          <input name="name" maxlength="100" required class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
+          <label for="contactName" class="text-sm font-medium">Nome *</label>
+          <input id="contactName" name="name" maxlength="100" required class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
         </div>
         <div class="grid sm:grid-cols-2 gap-4">
           <div>
-            <label class="text-sm font-medium">Email *</label>
-            <input name="email" type="email" maxlength="255" required class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
+            <label for="contactEmail" class="text-sm font-medium">Email *</label>
+            <input id="contactEmail" name="email" type="email" maxlength="255" required class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
           </div>
           <div>
-            <label class="text-sm font-medium">Telefone</label>
-            <input name="phone" maxlength="20" class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
+            <label for="contactPhone" class="text-sm font-medium">Telefone</label>
+            <input id="contactPhone" name="phone" maxlength="20" class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition" />
           </div>
         </div>
         <div>
-          <label class="text-sm font-medium">Mensagem *</label>
-          <textarea name="message" required maxlength="1000" rows="5" class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition resize-none"></textarea>
+          <label for="contactMessage" class="text-sm font-medium">Mensagem *</label>
+          <textarea id="contactMessage" name="message" required maxlength="1000" rows="5" class="mt-1 w-full px-4 py-2.5 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-ring transition resize-none"></textarea>
         </div>
         <button type="submit" class="button-zoom w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition">
           Enviar Mensagem <i data-lucide="send" class="icon"></i>
         </button>
-        <p id="formMsg" class="text-sm text-muted-foreground hidden"></p>
+        <p id="formMsg" class="text-sm hidden" role="status" aria-live="polite"></p>
+        <p class="text-xs text-muted-foreground">
+          Ao enviar, seus dados são usados apenas para retorno deste contato. Veja nossa
+          <a href="privacidade.html" class="underline hover:text-primary">Política de Privacidade</a>.
+        </p>
       </form>
     </div>
   </div>
@@ -399,7 +390,7 @@ tailwind.config = {
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-3 gap-8">
       <div class="text-center">
-        <div class="bg-white inline-flex p-2 rounded-lg"><img src="assets/Logo%20Scherr%20-%20PNG_Horizontal.png" alt="Scherr Química" class="h-12 w-auto" /></div>
+        <div class="bg-white inline-flex p-2 rounded-lg"><img src="assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-12 w-auto" /></div>
         <p class="mx-auto mt-4 max-w-xs text-sm opacity-70">Especialistas em tratamento de água industrial desde 1993. Nova Lima, MG.</p>
       </div>
       <div>
@@ -436,7 +427,7 @@ tailwind.config = {
   </div>
 </footer>
 
-<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/lucide@1.28.0/dist/umd/lucide.min.js"></script>
 <script src="script.js?v=20260709-menu"></script>
 <a href="https://wa.me/5531992247394?text=Olá%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Scherr%20Química." target="_blank" rel="noopener noreferrer" class="button-zoom fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition sm:bottom-6 sm:right-6 sm:h-14 sm:w-14" aria-label="Falar pelo WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">

@@ -38,6 +38,14 @@ if (mobileMenuButton && mobileMenu) {
 
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
+  const feedback = document.getElementById("formMsg");
+
+  const showFeedback = (text, tone) => {
+    feedback.textContent = text;
+    feedback.classList.remove("hidden", "text-muted-foreground", "text-red-600");
+    feedback.classList.add(tone === "error" ? "text-red-600" : "text-muted-foreground");
+  };
+
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.target;
@@ -45,11 +53,9 @@ if (contactForm) {
     const email = form.email.value.trim();
     const phone = form.phone.value.trim();
     const message = form.message.value.trim();
-    const feedback = document.getElementById("formMsg");
 
     if (!name || !email || !message) {
-      feedback.textContent = "Preencha todos os campos obrigatórios.";
-      feedback.classList.remove("hidden");
+      showFeedback("Preencha todos os campos obrigatórios.", "error");
       return;
     }
 
@@ -57,8 +63,7 @@ if (contactForm) {
     const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\n${message}`);
 
     window.location.href = `mailto:scherr@scherr.com.br?subject=${subject}&body=${body}`;
-    feedback.textContent = "Abrindo seu cliente de email...";
-    feedback.classList.remove("hidden");
+    showFeedback("Abrindo seu cliente de email...", "info");
   });
 }
 
