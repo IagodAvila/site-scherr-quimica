@@ -30,7 +30,7 @@ if (mobileMenuButton && mobileMenu) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1024) {
       setMobileMenuOpen(false);
     }
   });
