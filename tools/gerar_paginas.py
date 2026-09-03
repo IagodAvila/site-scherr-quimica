@@ -87,6 +87,15 @@ WHATSAPP = '''<a href="https://wa.me/5531992247394?text=Olá%20gostaria%20de%20m
 </a>'''
 
 
+# dimensoes reais dos arquivos em assets/ - width/height precisa bater com a imagem,
+# senao o aspect-ratio informado ao navegador esta errado.
+DIMS = {
+    'hero-water-treatment.jpg':    (1400, 933),
+    'services-lab-testing.jpg':    (1600, 480),
+    'partners-water-drop.jpg':     (1600, 640),
+    'about-industrial-valves.jpg': (1200, 900),
+}
+
 def build(page, others):
     url = '%s/%s/' % (BASE, page['slug'])
 
@@ -239,7 +248,7 @@ def build(page, others):
         </div>
       </div>
       <div class="rounded-2xl overflow-hidden shadow-elegant">
-        <img src="/assets/{img}" alt="{img_alt}" width="1600" height="900" fetchpriority="high" class="w-full h-56 sm:h-72 lg:h-80 object-cover" />
+        <img src="/assets/{img}" alt="{img_alt}" width="{img_w}" height="{img_h}" fetchpriority="high" class="w-full h-56 sm:h-72 lg:h-80 object-cover" />
       </div>
     </div>
   </div>
@@ -366,6 +375,7 @@ def build(page, others):
 '''.format(
     title=esc(page['title']), desc=esc(page['desc']), url=url, base=BASE,
     img=page['img'], img_alt=esc(page['img_alt']),
+    img_w=DIMS[page['img']][0], img_h=DIMS[page['img']][1],
     ld=json.dumps(ld, ensure_ascii=False, indent=2),
     header=HEADER, nav=esc(page['nav']), frase=esc(page['frase']),
     icon=page['icon'], h1=esc(page['h1']), lead=esc(page['lead']),

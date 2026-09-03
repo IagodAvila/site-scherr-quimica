@@ -12,8 +12,8 @@ PAGES = [
  "h1": "Tratamento de água de caldeiras e geradores de vapor",
  "lead": "Produtos químicos e assistência técnica para o ciclo completo da água de caldeiras — tratamento externo, tratamento interno e proteção da rede de vapor e condensado — com foco em eficiência térmica, economia de combustível e vida útil do equipamento.",
  "service_name": "Tratamento de água de geradores de vapor (caldeiras)",
- "img": "services-lab-testing.jpg",
- "img_alt": "Análise laboratorial de amostra de água de caldeira",
+ "img": "about-industrial-valves.jpg",
+ "img_alt": "Válvulas e tubulação de rede de vapor industrial",
  "problem_h2": "O que acontece com uma caldeira sem tratamento de água adequado",
  "problem_p": "A água de alimentação carrega sais dissolvidos, oxigênio e gases que, sob temperatura e pressão, se concentram no interior do gerador de vapor. Sem um programa químico consistente, três mecanismos de degradação atuam ao mesmo tempo e se realimentam.",
  "problem_items": [
@@ -119,8 +119,8 @@ PAGES = [
  "h1": "Tratamento de efluentes industriais",
  "lead": "Coagulantes, floculantes e polímeros para tratamento físico-químico de efluentes industriais, acompanhados do monitoramento operacional e químico da estação — para enquadramento no padrão de lançamento e redução do volume de lodo gerado.",
  "service_name": "Tratamento de efluentes industriais",
- "img": "partners-water-drop.jpg",
- "img_alt": "Superfície de água tratada em estação de efluentes",
+ "img": "hero-water-treatment.jpg",
+ "img_alt": "Vista aérea dos tanques de uma estação de tratamento",
  "problem_h2": "Por que o tratamento físico-químico exige ajuste contínuo",
  "problem_p": "Efluente industrial não tem composição constante. Mudanças de campanha, de matéria-prima, de turno ou de chuva alteram vazão, pH, carga orgânica e sólidos suspensos. Uma dosagem fixa que funcionou no mês passado pode gerar, hoje, efluente fora do padrão ou consumo desnecessário de produto.",
  "problem_items": [
@@ -172,8 +172,8 @@ PAGES = [
  "h1": "Tratamento de água gelada e circuitos fechados",
  "lead": "Programas químicos para circuitos fechados de água gelada, chillers e fancoils. Volume de reposição baixo não significa ausência de risco: é justamente no circuito fechado mal tratado que a corrosão passa despercebida até obstruir o sistema.",
  "service_name": "Tratamento de água gelada e sistemas de resfriamento",
- "img": "services-lab-testing.jpg",
- "img_alt": "Amostras de água em análise no laboratório",
+ "img": "partners-water-drop.jpg",
+ "img_alt": "Superfície de água limpa em circuito de resfriamento",
  "problem_h2": "O risco específico dos circuitos fechados",
  "problem_p": "Um circuito fechado troca pouca água, e por isso é comum tratá-lo como se não precisasse de programa químico. Na prática, ele acumula os produtos da própria degradação: sem reposição significativa, tudo o que corrói fica dentro do sistema.",
  "problem_items": [
@@ -226,7 +226,7 @@ PAGES = [
  "lead": "Produtos e suporte técnico para sistemas de abrandamento, desmineralização por troca iônica e geração de água de alta pureza — a etapa de tratamento externo que define a qualidade da água que entra na caldeira e no processo.",
  "service_name": "Abrandadores, desmineralizadores e água de alta pureza",
  "img": "services-lab-testing.jpg",
- "img_alt": "Análise de qualidade de água desmineralizada em laboratório",
+ "img_alt": "Amostras de água em análise de qualidade no laboratório",
  "problem_h2": "Por que o tratamento externo determina o custo do tratamento interno",
  "problem_p": "Toda dureza, sílica e matéria orgânica que passa pelo tratamento externo vira problema — e custo de produto químico — no tratamento interno da caldeira ou no processo. Um abrandador com resina exaurida ou uma regeneração mal conduzida transferem silenciosamente essa carga para a frente.",
  "problem_items": [
