@@ -157,6 +157,16 @@ uma *Access Key* pelo próprio e-mail da empresa.
 
 ### Imagens
 
+**Créditos e licença das fotos de banco**
+
+| Arquivo | Origem | Licença |
+| --- | --- | --- |
+| `assets/hero-estacao-tratamento.jpg` | [Pexels, foto 35425762](https://www.pexels.com/photo/35425762/) | Licença Pexels — uso comercial livre, sem atribuição obrigatória |
+
+As demais imagens em `assets/` vieram do projeto original; a origem não está registrada.
+Vale confirmar a licença de cada uma antes de qualquer uso fora do site.
+
+
 O hero e os banners das seções de Serviços, Sobre e Parceiros usam fotos de banco gratuito
 ([Pexels](https://www.pexels.com), licença livre para uso comercial, sem exigência de atribuição) como
 **placeholder genérico** — nenhuma delas retrata a fábrica, o laboratório ou a equipe reais da Scherr Química.
