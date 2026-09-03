@@ -9,7 +9,7 @@ ORG  = BASE + '/#organization'
 
 # Descricao institucional unica, a mesma usada no Perfil da Empresa no Google.
 ORG_DESC = (
-    "A Scherr Química atua desde 1993 no tratamento de água industrial, em Nova Lima (MG). Fornecemos produtos químicos e assistência técnica para geradores de vapor (caldeiras), torres de resfriamento, água gelada, efluentes industriais, óleo combustível e sistemas de abrandamento e desmineralização. Temos laboratório químico próprio para análises de água e de depósito, contagem microbiológica e determinação de taxas de corrosão em corpos de prova. O atendimento inclui relatórios periódicos, inspeções, limpezas químicas em caldeiras, trocadores de calor e torres, e equipamentos de dosagem em comodato. Empresa certificada NSF e ganhadora do Prêmio Fornecedores Vale na categoria Meio Ambiente."
+    "A Scherr Química atua no tratamento de água industrial desde 1993 e tem sede em Nova Lima (MG). Fornecemos produtos químicos e assistência técnica para geradores de vapor (caldeiras), torres de resfriamento, água gelada, efluentes industriais, óleo combustível e sistemas de abrandamento e desmineralização. Temos laboratório químico próprio para análises de água e de depósito, contagem microbiológica e determinação de taxas de corrosão em corpos de prova. O atendimento inclui relatórios periódicos, inspeções, limpezas químicas em caldeiras, trocadores de calor e torres, e equipamentos de dosagem em comodato. Empresa certificada NSF e ganhadora do Prêmio Fornecedores Vale na categoria Meio Ambiente."
 )
 
 def esc(t):
