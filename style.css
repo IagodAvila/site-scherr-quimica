@@ -2,32 +2,41 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Evita que o header sticky (h-16 = 4rem) cubra o topo das seções ao navegar por âncora */
 section[id] {
   scroll-margin-top: 4rem;
 }
 
 body {
-  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+  letter-spacing: -0.018em;
+}
+
+/* Numerais tabulares em toda medição: casas decimais alinhadas. */
+.mono, .tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 .header-nav-link {
   display: inline-block;
-  transition: color 200ms ease, transform 200ms ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 160ms ease, color 160ms ease;
 }
 
 .header-nav-link:hover,
 .header-nav-link:focus-visible {
-  transform: scale(1.08);
+  border-bottom-color: #00a068;
 }
 
-.button-zoom {
-  transition: transform 200ms ease, opacity 200ms ease, background-color 200ms ease, color 200ms ease;
-}
-
-.button-zoom:hover,
-.button-zoom:focus-visible {
-  transform: scale(1.05);
+.acao {
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
 .icon {
@@ -35,14 +44,27 @@ body {
   height: 1em;
   stroke: currentColor;
   fill: none;
-  stroke-width: 2;
+  stroke-width: 1.75;
   stroke-linecap: round;
   stroke-linejoin: round;
   display: inline-block;
   vertical-align: -0.125em;
 }
 
-/* FAQ: remove o marcador nativo do <summary> (Safari/iOS ignora list-style) */
+/* Foco visível em toda a navegação por teclado. */
+:focus-visible {
+  outline: 2px solid #d98a1f;
+  outline-offset: 2px;
+}
+
 summary::-webkit-details-marker {
   display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

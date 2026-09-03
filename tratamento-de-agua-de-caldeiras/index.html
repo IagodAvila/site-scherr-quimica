@@ -215,354 +215,311 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" /></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" /></noscript>
 <link rel="stylesheet" href="/assets/app.css" />
 <link rel="stylesheet" href="/style.css" />
 </head>
-<body class="bg-background text-foreground">
+<body class="bg-papel text-tinta">
 
-<header class="sticky top-0 z-50 bg-white/85 backdrop-blur border-b border-border">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2" aria-label="Scherr Química - Início">
-      <img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-14 w-auto" />
+<a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:z-[200] focus:m-3 focus:bg-tinta focus:px-4 focus:py-2 focus:text-sobre-verde">Pular para o conteúdo</a>
+
+<header class="sticky top-0 z-50 border-b border-fio bg-papel/95 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+    <a href="/" class="flex items-center" aria-label="Scherr Química - Início">
+      <img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-11 w-auto" />
     </a>
-    <nav class="hidden lg:flex items-center gap-8 text-base font-bold">
-      <a href="/#areas-atuacao" class="header-nav-link hover:text-primary">Áreas de Atuação</a>
-      <a href="/#servicos" class="header-nav-link hover:text-primary">Serviços</a>
-      <a href="/#sobre" class="header-nav-link hover:text-primary">Sobre</a>
-      <a href="/#parceiros" class="header-nav-link hover:text-primary">Parceiros</a>
-      <a href="/#contato" class="header-nav-link hover:text-primary">Contato</a>
+    <nav class="hidden items-center gap-7 text-sm font-medium lg:flex">
+      <a href="/#areas-atuacao" class="header-nav-link">Áreas de atuação</a>
+      <a href="/#servicos" class="header-nav-link">Serviços</a>
+      <a href="/#sobre" class="header-nav-link">Sobre</a>
+      <a href="/#setores" class="header-nav-link">Setores</a>
+      <a href="/#contato" class="header-nav-link">Contato</a>
     </nav>
-    <a href="/#contato" class="button-zoom hidden lg:inline-flex items-center px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:opacity-90 transition">Fale Conosco</a>
-    <button id="mobileMenuButton" type="button" class="button-zoom lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background text-foreground transition hover:bg-accent" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
-      <i data-lucide="menu" class="icon"></i>
+    <a href="/#contato" class="acao hidden bg-verde px-4 py-2 text-sm font-semibold text-white hover:bg-verde-fundo lg:inline-flex">Solicitar avaliação</a>
+    <button id="mobileMenuButton" type="button" class="acao inline-flex h-10 w-10 items-center justify-center border border-fio-forte text-tinta hover:bg-superficie lg:hidden" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
+      <svg data-icone="abrir" class="icon h-5 w-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg data-icone="fechar" class="icon h-5 w-5" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
-  <div id="mobileMenu" class="hidden border-t border-border bg-white lg:hidden">
-    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 text-base font-semibold sm:px-6">
-      <a href="/#areas-atuacao" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Áreas de Atuação</a>
-      <a href="/#servicos" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Serviços</a>
-      <a href="/#sobre" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Sobre</a>
-      <a href="/#parceiros" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Parceiros</a>
-      <a href="/#contato" class="rounded-lg px-3 py-3 transition hover:bg-accent hover:text-primary">Contato</a>
-      <a href="/#contato" class="button-zoom mt-2 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90">Fale Conosco</a>
+  <div id="mobileMenu" class="border-t border-fio bg-papel lg:hidden" hidden>
+    <nav class="mx-auto flex max-w-6xl flex-col px-5 sm:px-8">
+      <a href="/#areas-atuacao" class="border-b border-fio py-4 font-medium">Áreas de atuação</a>
+      <a href="/#servicos" class="border-b border-fio py-4 font-medium">Serviços</a>
+      <a href="/#sobre" class="border-b border-fio py-4 font-medium">Sobre</a>
+      <a href="/#setores" class="border-b border-fio py-4 font-medium">Setores</a>
+      <a href="/#contato" class="border-b border-fio py-4 font-medium">Contato</a>
+      <a href="/#contato" class="acao my-4 bg-verde px-4 py-3 text-center font-semibold text-white">Solicitar avaliação</a>
     </nav>
   </div>
 </header>
 
-<main>
-<!-- Hero -->
-<section id="topo" class="relative overflow-hidden bg-secondary/40">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
-    <nav aria-label="Você está aqui" class="mb-6 text-sm text-muted-foreground">
+<main id="conteudo">
+
+<section id="topo" class="bg-verde-fundo">
+  <div class="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
+    <nav aria-label="Você está aqui" class="text-xs text-sobre-verde-dim">
       <ol class="flex flex-wrap items-center gap-2">
-        <li><a href="/" class="hover:text-primary transition">Início</a></li>
+        <li><a href="/" class="hover:text-verde-claro">Início</a></li>
         <li aria-hidden="true">/</li>
-        <li><a href="/#areas-atuacao" class="hover:text-primary transition">Áreas de Atuação</a></li>
+        <li><a href="/#areas-atuacao" class="hover:text-verde-claro">Áreas de atuação</a></li>
         <li aria-hidden="true">/</li>
-        <li><span aria-current="page" class="text-foreground font-medium">Caldeiras</span></li>
+        <li><span aria-current="page" class="text-sobre-verde">Caldeiras</span></li>
       </ol>
     </nav>
-    <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+    <div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:items-center lg:gap-14">
       <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold mb-5">
-          <i data-lucide="flame" class="icon"></i> Áreas de Atuação
+        <p class="font-mono text-xs text-verde-claro">CALD</p>
+        <h1 class="mt-3 text-3xl font-bold text-sobre-verde sm:text-4xl">Tratamento de água de caldeiras e geradores de vapor</h1>
+        <p class="mt-5 max-w-medida text-base text-sobre-verde-dim">Produtos químicos e assistência técnica para o ciclo completo da água de caldeiras — tratamento externo, tratamento interno e proteção da rede de vapor e condensado — com foco em eficiência térmica, economia de combustível e vida útil do equipamento.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/#contato" class="acao bg-verde px-5 py-3 font-semibold text-white hover:bg-white hover:text-verde-fundo">Solicitar avaliação técnica</a>
+          <a href="https://wa.me/5531992247394" target="_blank" rel="noopener noreferrer" class="acao border border-sobre-verde-dim/50 px-5 py-3 font-semibold text-sobre-verde hover:border-sobre-verde">Falar com um técnico</a>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15]">Tratamento de água de caldeiras e geradores de vapor</h1>
-        <p class="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">Produtos químicos e assistência técnica para o ciclo completo da água de caldeiras — tratamento externo, tratamento interno e proteção da rede de vapor e condensado — com foco em eficiência térmica, economia de combustível e vida útil do equipamento.</p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/#contato" class="button-zoom inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold shadow-elegant hover:opacity-90 transition">
-            Solicite um Orçamento <i data-lucide="send" class="icon"></i>
-          </a>
-          <a href="https://wa.me/5531992247394" target="_blank" rel="noopener noreferrer" class="button-zoom inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border bg-background font-semibold hover:bg-accent transition">
-            Falar com um técnico
-          </a>
-        </div>
+        <p class="mt-8 font-mono text-xs text-sobre-verde-dim">PARÂMETROS DE CONTROLE · O₂ dissolvido · pH · condutividade · alcalinidade</p>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-elegant">
-        <img src="/assets/about-industrial-valves.jpg" alt="Válvulas e tubulação de rede de vapor industrial" width="1200" height="900" fetchpriority="high" class="w-full h-56 sm:h-72 lg:h-80 object-cover" />
-      </div>
+      <img src="/assets/about-industrial-valves.jpg" alt="Válvulas e tubulação de rede de vapor industrial" width="1200" height="900" fetchpriority="high" class="h-56 w-full object-cover sm:h-72 lg:h-80" />
     </div>
   </div>
 </section>
 
-<!-- Problema -->
-<section id="problema" class="py-16 sm:py-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold">O que acontece com uma caldeira sem tratamento de água adequado</h2>
-      <p class="mt-4 text-muted-foreground leading-relaxed">A água de alimentação carrega sais dissolvidos, oxigênio e gases que, sob temperatura e pressão, se concentram no interior do gerador de vapor. Sem um programa químico consistente, três mecanismos de degradação atuam ao mesmo tempo e se realimentam.</p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6">
-      <article class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <h3 class="text-lg font-semibold">Incrustação</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Sais de cálcio e magnésio precipitam nas superfícies de troca térmica e formam depósitos isolantes. Uma camada fina de incrustação já é suficiente para elevar a temperatura do metal e aumentar o consumo de combustível para produzir o mesmo vapor.</p>
-      </article>
-      <article class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <h3 class="text-lg font-semibold">Corrosão</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">O oxigênio dissolvido e o gás carbônico atacam o aço do costado, dos tubos e, principalmente, da linha de condensado. A corrosão por pite é localizada e pode perfurar tubos sem aviso prévio.</p>
-      </article>
-      <article class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <h3 class="text-lg font-semibold">Arraste e contaminação do vapor</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Sólidos dissolvidos em excesso e alcalinidade fora de faixa provocam arraste de água junto com o vapor, o que contamina o processo e danifica linhas, purgadores e trocadores a jusante.</p>
-      </article>
-      <article class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <h3 class="text-lg font-semibold">Fragilização e superaquecimento</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Depósitos localizados criam pontos quentes. O metal superaquecido perde resistência mecânica, o que é a origem mais comum de falhas graves em tubos de caldeira.</p>
-      </article>
-    </div>
-  </div>
+<section id="problema" class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+  <h2 class="max-w-medida text-2xl font-bold">O que acontece com uma caldeira sem tratamento de água adequado</h2>
+  <p class="mt-4 max-w-medida text-aco">A água de alimentação carrega sais dissolvidos, oxigênio e gases que, sob temperatura e pressão, se concentram no interior do gerador de vapor. Sem um programa químico consistente, três mecanismos de degradação atuam ao mesmo tempo e se realimentam.</p>
+  <dl class="mt-10 grid border-t-[3px] border-verde md:grid-cols-2 md:gap-x-12">
+      <div class="border-b border-fio py-5">
+        <dt class="text-lg font-semibold">Incrustação</dt>
+        <dd class="mt-2 max-w-medida text-sm text-aco">Sais de cálcio e magnésio precipitam nas superfícies de troca térmica e formam depósitos isolantes. Uma camada fina de incrustação já é suficiente para elevar a temperatura do metal e aumentar o consumo de combustível para produzir o mesmo vapor.</dd>
+      </div>
+      <div class="border-b border-fio py-5">
+        <dt class="text-lg font-semibold">Corrosão</dt>
+        <dd class="mt-2 max-w-medida text-sm text-aco">O oxigênio dissolvido e o gás carbônico atacam o aço do costado, dos tubos e, principalmente, da linha de condensado. A corrosão por pite é localizada e pode perfurar tubos sem aviso prévio.</dd>
+      </div>
+      <div class="border-b border-fio py-5">
+        <dt class="text-lg font-semibold">Arraste e contaminação do vapor</dt>
+        <dd class="mt-2 max-w-medida text-sm text-aco">Sólidos dissolvidos em excesso e alcalinidade fora de faixa provocam arraste de água junto com o vapor, o que contamina o processo e danifica linhas, purgadores e trocadores a jusante.</dd>
+      </div>
+      <div class="border-b border-fio py-5">
+        <dt class="text-lg font-semibold">Fragilização e superaquecimento</dt>
+        <dd class="mt-2 max-w-medida text-sm text-aco">Depósitos localizados criam pontos quentes. O metal superaquecido perde resistência mecânica, o que é a origem mais comum de falhas graves em tubos de caldeira.</dd>
+      </div>
+  </dl>
 </section>
 
-<!-- Como tratamos -->
-<section id="como-tratamos" class="py-16 sm:py-20 bg-secondary/40">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-10">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Metodologia</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">Como estruturamos o tratamento</h2>
-    </div>
-    <ol class="grid md:grid-cols-2 gap-6">
-      <li class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <div class="grid place-items-center h-9 w-9 rounded-lg bg-primary/10 text-primary font-bold text-sm">1</div>
-        <h3 class="mt-4 text-lg font-semibold">Tratamento externo da água de alimentação</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Condicionamento da água antes da entrada na caldeira: abrandamento, desmineralização e remoção de dureza, sílica e matéria orgânica conforme a pressão de operação e a qualidade da água bruta disponível.</p>
+<section id="como-tratamos" class="border-t border-fio bg-superficie">
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="max-w-medida text-2xl font-bold">Como estruturamos o tratamento</h2>
+    <ol class="mt-10 grid border-t-[3px] border-verde md:grid-cols-2 md:gap-x-12">
+      <li class="grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
+        <span class="font-mono text-xs text-verde-texto">01</span>
+        <span>
+          <span class="block text-lg font-semibold">Tratamento externo da água de alimentação</span>
+          <span class="mt-2 block max-w-medida text-sm text-aco">Condicionamento da água antes da entrada na caldeira: abrandamento, desmineralização e remoção de dureza, sílica e matéria orgânica conforme a pressão de operação e a qualidade da água bruta disponível.</span>
+        </span>
       </li>
-      <li class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <div class="grid place-items-center h-9 w-9 rounded-lg bg-primary/10 text-primary font-bold text-sm">2</div>
-        <h3 class="mt-4 text-lg font-semibold">Tratamento interno</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Dosagem de produtos químicos no interior do gerador de vapor para controlar dureza residual, sequestrar o oxigênio dissolvido, ajustar alcalinidade e pH e dispersar sólidos, mantendo-os em suspensão para remoção pelas descargas.</p>
+      <li class="grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
+        <span class="font-mono text-xs text-verde-texto">02</span>
+        <span>
+          <span class="block text-lg font-semibold">Tratamento interno</span>
+          <span class="mt-2 block max-w-medida text-sm text-aco">Dosagem de produtos químicos no interior do gerador de vapor para controlar dureza residual, sequestrar o oxigênio dissolvido, ajustar alcalinidade e pH e dispersar sólidos, mantendo-os em suspensão para remoção pelas descargas.</span>
+        </span>
       </li>
-      <li class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <div class="grid place-items-center h-9 w-9 rounded-lg bg-primary/10 text-primary font-bold text-sm">3</div>
-        <h3 class="mt-4 text-lg font-semibold">Rede de vapor e condensado</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Proteção das linhas de retorno contra corrosão ácida por CO₂ e por oxigênio, preservando o condensado — que é água quente e de baixa condutividade, e portanto o insumo mais valioso do ciclo.</p>
+      <li class="grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
+        <span class="font-mono text-xs text-verde-texto">03</span>
+        <span>
+          <span class="block text-lg font-semibold">Rede de vapor e condensado</span>
+          <span class="mt-2 block max-w-medida text-sm text-aco">Proteção das linhas de retorno contra corrosão ácida por CO₂ e por oxigênio, preservando o condensado — que é água quente e de baixa condutividade, e portanto o insumo mais valioso do ciclo.</span>
+        </span>
       </li>
-      <li class="bg-card border border-border rounded-2xl p-6 shadow-card">
-        <div class="grid place-items-center h-9 w-9 rounded-lg bg-primary/10 text-primary font-bold text-sm">4</div>
-        <h3 class="mt-4 text-lg font-semibold">Controle analítico e ajuste de regime</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Definição das faixas de controle, rotina de análises, regime de descargas de fundo e de superfície e ajuste da dosagem conforme a carga real da caldeira.</p>
+      <li class="grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
+        <span class="font-mono text-xs text-verde-texto">04</span>
+        <span>
+          <span class="block text-lg font-semibold">Controle analítico e ajuste de regime</span>
+          <span class="mt-2 block max-w-medida text-sm text-aco">Definição das faixas de controle, rotina de análises, regime de descargas de fundo e de superfície e ajuste da dosagem conforme a carga real da caldeira.</span>
+        </span>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- Produtos -->
-<section id="produtos" class="py-16 sm:py-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12">
+<section id="produtos" class="border-t border-fio">
+  <div class="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2 lg:gap-16">
     <div>
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Produtos</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">Linha de produtos aplicada em geradores de vapor</h2>
-      <ul class="mt-6 space-y-3 text-muted-foreground leading-relaxed">
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Sequestrantes de oxigênio para eliminação do oxigênio dissolvido residual</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Inibidores de incrustação e condicionadores de lama para dureza residual</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Alcalinizantes e produtos para controle de pH da água da caldeira</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Aminas neutralizantes e filmantes para proteção da rede de vapor e condensado</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Dispersantes para manutenção dos sólidos em suspensão</span></li>
-          <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="icon text-primary mt-1 shrink-0"></i><span>Produtos para limpeza química de pré-operação e de manutenção</span></li>
+      <h2 class="max-w-medida text-2xl font-bold">Linha de produtos aplicada em geradores de vapor</h2>
+      <ul class="mt-8 border-t-[3px] border-verde">
+          <li class="border-b border-fio py-3 text-sm">Sequestrantes de oxigênio para eliminação do oxigênio dissolvido residual</li>
+          <li class="border-b border-fio py-3 text-sm">Inibidores de incrustação e condicionadores de lama para dureza residual</li>
+          <li class="border-b border-fio py-3 text-sm">Alcalinizantes e produtos para controle de pH da água da caldeira</li>
+          <li class="border-b border-fio py-3 text-sm">Aminas neutralizantes e filmantes para proteção da rede de vapor e condensado</li>
+          <li class="border-b border-fio py-3 text-sm">Dispersantes para manutenção dos sólidos em suspensão</li>
+          <li class="border-b border-fio py-3 text-sm">Produtos para limpeza química de pré-operação e de manutenção</li>
       </ul>
     </div>
-    <div class="bg-card border border-border rounded-2xl p-6 sm:p-8 shadow-card self-start">
-      <h2 class="text-xl font-semibold">O que está incluso no atendimento</h2>
-      <ul class="mt-5 space-y-3 text-sm text-muted-foreground leading-relaxed">
-        <li class="flex items-start gap-3"><i data-lucide="flask-conical" class="icon text-primary mt-1 shrink-0"></i><span>Análises de água, análises de depósito e contagem microbiológica em laboratório químico próprio</span></li>
-        <li class="flex items-start gap-3"><i data-lucide="activity" class="icon text-primary mt-1 shrink-0"></i><span>Determinação das taxas de corrosão e deposição em corpos de prova de aço carbono, ligas de cobre e admiralty</span></li>
-        <li class="flex items-start gap-3"><i data-lucide="file-text" class="icon text-primary mt-1 shrink-0"></i><span>Relatórios periódicos de avaliação do tratamento e inspeções com registros fotográficos e filmagens</span></li>
-        <li class="flex items-start gap-3"><i data-lucide="wrench" class="icon text-primary mt-1 shrink-0"></i><span>Tanques de dosagem e de estocagem, bombas dosadoras, drenos e descargas automáticas em regime de comodato</span></li>
-        <li class="flex items-start gap-3"><i data-lucide="microscope" class="icon text-primary mt-1 shrink-0"></i><span>Montagem de laboratório na planta, com infraestrutura, aparelhagem e analista</span></li>
-        <li class="flex items-start gap-3"><i data-lucide="truck" class="icon text-primary mt-1 shrink-0"></i><span>Transporte de produtos e de pessoal operacional e técnico</span></li>
+    <div>
+      <h2 class="max-w-medida text-2xl font-bold">O que acompanha o fornecimento</h2>
+      <ul class="mt-8 border-t-[3px] border-verde text-sm">
+        <li class="border-b border-fio py-3">Análises de água, de depósito e contagem microbiológica em laboratório próprio</li>
+        <li class="border-b border-fio py-3">Taxas de corrosão e deposição em corpos de prova de aço carbono, ligas de cobre e admiralty</li>
+        <li class="border-b border-fio py-3">Relatórios periódicos de avaliação e inspeções com registro fotográfico</li>
+        <li class="border-b border-fio py-3">Tanques, bombas dosadoras e descargas automáticas em regime de comodato</li>
+        <li class="border-b border-fio py-3">Montagem de laboratório na planta, com aparelhagem e analista</li>
+        <li class="border-b border-fio py-3">Transporte de produto e de pessoal operacional e técnico</li>
       </ul>
-      <a href="/#servicos" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline">
-        Ver todos os serviços <i data-lucide="arrow-right" class="icon"></i>
-      </a>
+      <a href="/#servicos" class="mt-6 inline-block font-semibold text-verde-texto hover:underline">Ver todos os serviços</a>
     </div>
   </div>
 </section>
 
-<!-- Resultados -->
-<section id="resultados" class="py-16 sm:py-20 bg-secondary/40">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-10">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Resultados</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">O que o programa entrega na operação</h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-secondary/50 rounded-2xl p-6">
-        <h3 class="font-semibold">Economia de combustível</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Superfícies de troca térmica limpas transferem calor com a eficiência de projeto, reduzindo o consumo por tonelada de vapor produzida.</p>
+<section id="resultados" class="border-t border-fio bg-superficie">
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="max-w-medida text-2xl font-bold">O que o programa entrega na operação</h2>
+    <dl class="mt-10 grid border-t-[3px] border-verde md:grid-cols-2 md:gap-x-12">
+      <div class="border-b border-fio py-5">
+        <dt class="font-semibold">Economia de combustível</dt>
+        <dd class="mt-2 text-sm text-aco">Superfícies de troca térmica limpas transferem calor com a eficiência de projeto, reduzindo o consumo por tonelada de vapor produzida.</dd>
       </div>
-      <div class="bg-secondary/50 rounded-2xl p-6">
-        <h3 class="font-semibold">Menos paradas não programadas</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Controle de corrosão e de depósitos reduz falhas de tubo e a necessidade de intervenções emergenciais.</p>
+      <div class="border-b border-fio py-5">
+        <dt class="font-semibold">Menos paradas não programadas</dt>
+        <dd class="mt-2 text-sm text-aco">Controle de corrosão e de depósitos reduz falhas de tubo e a necessidade de intervenções emergenciais.</dd>
       </div>
-      <div class="bg-secondary/50 rounded-2xl p-6">
-        <h3 class="font-semibold">Vida útil do equipamento</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Preservação do costado, dos tubos e da rede de condensado ao longo dos anos.</p>
+      <div class="border-b border-fio py-5">
+        <dt class="font-semibold">Vida útil do equipamento</dt>
+        <dd class="mt-2 text-sm text-aco">Preservação do costado, dos tubos e da rede de condensado ao longo dos anos.</dd>
       </div>
-      <div class="bg-secondary/50 rounded-2xl p-6">
-        <h3 class="font-semibold">Rastreabilidade</h3>
-        <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Relatórios periódicos de avaliação do tratamento, com histórico das análises e das inspeções realizadas.</p>
+      <div class="border-b border-fio py-5">
+        <dt class="font-semibold">Rastreabilidade</dt>
+        <dd class="mt-2 text-sm text-aco">Relatórios periódicos de avaliação do tratamento, com histórico das análises e das inspeções realizadas.</dd>
       </div>
-    </div>
+    </dl>
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="py-16 sm:py-20">
-  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-    <div class="mb-10">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Dúvidas frequentes</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">Perguntas sobre tratamento de água de caldeiras</h2>
-    </div>
-    <div class="space-y-4">
-      <details class="group bg-card border border-border rounded-2xl p-6 shadow-card">
-        <summary class="cursor-pointer list-none font-semibold flex items-start justify-between gap-4">
+<section id="faq" class="border-t border-fio">
+  <div class="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="text-2xl font-bold">Perguntas sobre tratamento de água de caldeiras</h2>
+    <div class="mt-10 border-t-[3px] border-verde">
+      <details class="group border-b border-fio py-5">
+        <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-lg font-semibold">
           <span>Com que frequência a água da caldeira deve ser analisada?</span>
-          <i data-lucide="chevron-down" class="icon shrink-0 mt-1 text-primary transition-transform group-open:rotate-180"></i>
+          <svg class="icon mt-1.5 h-4 w-4 shrink-0 text-verde-texto transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
-        <p class="mt-3 text-muted-foreground leading-relaxed">A frequência depende da pressão de operação, da carga e da estabilidade da água de alimentação. Caldeiras industriais em operação contínua costumam exigir controle diário dos parâmetros básicos — pH, alcalinidade, condutividade, dureza e teor de sequestrante de oxigênio — complementado por análises laboratoriais mais completas em intervalos maiores. Definimos a rotina caso a caso e emitimos relatórios periódicos de avaliação do tratamento.</p>
+        <p class="mt-3 max-w-medida text-sm text-aco">A frequência depende da pressão de operação, da carga e da estabilidade da água de alimentação. Caldeiras industriais em operação contínua costumam exigir controle diário dos parâmetros básicos — pH, alcalinidade, condutividade, dureza e teor de sequestrante de oxigênio — complementado por análises laboratoriais mais completas em intervalos maiores. Definimos a rotina caso a caso e emitimos relatórios periódicos de avaliação do tratamento.</p>
       </details>
-      <details class="group bg-card border border-border rounded-2xl p-6 shadow-card">
-        <summary class="cursor-pointer list-none font-semibold flex items-start justify-between gap-4">
+      <details class="group border-b border-fio py-5">
+        <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-lg font-semibold">
           <span>Tratamento de água de caldeira substitui a limpeza química?</span>
-          <i data-lucide="chevron-down" class="icon shrink-0 mt-1 text-primary transition-transform group-open:rotate-180"></i>
+          <svg class="icon mt-1.5 h-4 w-4 shrink-0 text-verde-texto transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
-        <p class="mt-3 text-muted-foreground leading-relaxed">Não. O tratamento químico contínuo evita a formação de novos depósitos, mas não remove incrustação já consolidada. Quando a caldeira chega ao programa com histórico de depósito, a limpeza química é a etapa que devolve a superfície de troca ao estado limpo; o tratamento contínuo é o que mantém esse estado. A Scherr executa limpezas químicas em geradores de vapor, trocadores de calor e tubulações.</p>
+        <p class="mt-3 max-w-medida text-sm text-aco">Não. O tratamento químico contínuo evita a formação de novos depósitos, mas não remove incrustação já consolidada. Quando a caldeira chega ao programa com histórico de depósito, a limpeza química é a etapa que devolve a superfície de troca ao estado limpo; o tratamento contínuo é o que mantém esse estado. A Scherr executa limpezas químicas em geradores de vapor, trocadores de calor e tubulações.</p>
       </details>
-      <details class="group bg-card border border-border rounded-2xl p-6 shadow-card">
-        <summary class="cursor-pointer list-none font-semibold flex items-start justify-between gap-4">
+      <details class="group border-b border-fio py-5">
+        <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-lg font-semibold">
           <span>Por que o retorno de condensado precisa de tratamento próprio?</span>
-          <i data-lucide="chevron-down" class="icon shrink-0 mt-1 text-primary transition-transform group-open:rotate-180"></i>
+          <svg class="icon mt-1.5 h-4 w-4 shrink-0 text-verde-texto transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
-        <p class="mt-3 text-muted-foreground leading-relaxed">O condensado é água praticamente pura e quente, o que o torna o insumo mais econômico do ciclo — mas também agressivo. O gás carbônico liberado na caldeira acompanha o vapor e, ao condensar, forma ácido carbônico, que corrói as linhas de retorno. Sem proteção específica, o condensado chega contaminado com produtos de corrosão e acaba sendo descartado, o que desperdiça água e energia.</p>
+        <p class="mt-3 max-w-medida text-sm text-aco">O condensado é água praticamente pura e quente, o que o torna o insumo mais econômico do ciclo — mas também agressivo. O gás carbônico liberado na caldeira acompanha o vapor e, ao condensar, forma ácido carbônico, que corrói as linhas de retorno. Sem proteção específica, o condensado chega contaminado com produtos de corrosão e acaba sendo descartado, o que desperdiça água e energia.</p>
       </details>
-      <details class="group bg-card border border-border rounded-2xl p-6 shadow-card">
-        <summary class="cursor-pointer list-none font-semibold flex items-start justify-between gap-4">
+      <details class="group border-b border-fio py-5">
+        <summary class="flex cursor-pointer list-none items-start justify-between gap-4 text-lg font-semibold">
           <span>A Scherr fornece os equipamentos de dosagem?</span>
-          <i data-lucide="chevron-down" class="icon shrink-0 mt-1 text-primary transition-transform group-open:rotate-180"></i>
+          <svg class="icon mt-1.5 h-4 w-4 shrink-0 text-verde-texto transition-transform group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </summary>
-        <p class="mt-3 text-muted-foreground leading-relaxed">Sim. Tanques de dosagem, tanques de estocagem, bombas dosadoras, drenos e descargas automáticas podem ser fornecidos em regime de comodato. Também realizamos a montagem de laboratório com infraestrutura, aparelhagem e analista.</p>
+        <p class="mt-3 max-w-medida text-sm text-aco">Sim. Tanques de dosagem, tanques de estocagem, bombas dosadoras, drenos e descargas automáticas podem ser fornecidos em regime de comodato. Também realizamos a montagem de laboratório com infraestrutura, aparelhagem e analista.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- Outras áreas -->
-<section id="outras-areas" class="py-16 sm:py-20 bg-secondary/40">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-10">
-      <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Outras áreas de atuação</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">Soluções completas em tratamento de água industrial</h2>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <a href="/tratamento-de-agua-de-torres-de-resfriamento/" class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-        <div class="grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="droplets" class="icon" style="font-size:1.375rem"></i>
-        </div>
-        <h3 class="mt-4 font-semibold">Tratamento de água de torres de resfriamento</h3>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+<section id="outras-areas" class="border-t border-fio bg-superficie">
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="max-w-medida text-2xl font-bold">Outras áreas de atuação</h2>
+    <div class="mt-10 border-t-[3px] border-verde">
+      <a href="/tratamento-de-agua-de-torres-de-resfriamento/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="font-mono text-xs text-verde-texto">TORR</span>
+        <span>
+          <span class="block text-lg font-semibold group-hover:text-verde-texto">Tratamento de água de torres de resfriamento</span>
+          <span class="mt-1 block max-w-medida text-sm text-aco">ciclos de concentração · UFC/mL · índice de saturação</span>
+        </span>
       </a>
-      <a href="/tratamento-de-efluentes-industriais/" class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-        <div class="grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="recycle" class="icon" style="font-size:1.375rem"></i>
-        </div>
-        <h3 class="mt-4 font-semibold">Tratamento de efluentes industriais</h3>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+      <a href="/tratamento-de-efluentes-industriais/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="font-mono text-xs text-verde-texto">EFLU</span>
+        <span>
+          <span class="block text-lg font-semibold group-hover:text-verde-texto">Tratamento de efluentes industriais</span>
+          <span class="mt-1 block max-w-medida text-sm text-aco">DQO · sólidos suspensos · pH · turbidez</span>
+        </span>
       </a>
-      <a href="/tratamento-de-agua-gelada/" class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-        <div class="grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="snowflake" class="icon" style="font-size:1.375rem"></i>
-        </div>
-        <h3 class="mt-4 font-semibold">Tratamento de água gelada e circuitos fechados</h3>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+      <a href="/tratamento-de-agua-gelada/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="font-mono text-xs text-verde-texto">GELA</span>
+        <span>
+          <span class="block text-lg font-semibold group-hover:text-verde-texto">Tratamento de água gelada e circuitos fechados</span>
+          <span class="mt-1 block max-w-medida text-sm text-aco">concentração de inibidor · UFC/mL · pH</span>
+        </span>
       </a>
-      <a href="/abrandadores-e-desmineralizadores/" class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-        <div class="grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="flask-conical" class="icon" style="font-size:1.375rem"></i>
-        </div>
-        <h3 class="mt-4 font-semibold">Abrandadores, desmineralizadores e água de alta pureza</h3>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+      <a href="/abrandadores-e-desmineralizadores/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="font-mono text-xs text-verde-texto">DESM</span>
+        <span>
+          <span class="block text-lg font-semibold group-hover:text-verde-texto">Abrandadores, desmineralizadores e água de alta pureza</span>
+          <span class="mt-1 block max-w-medida text-sm text-aco">dureza residual · sílica · condutividade</span>
+        </span>
       </a>
-      <a href="/tratamento-de-oleo-combustivel/" class="group bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
-        <div class="grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-          <i data-lucide="fuel" class="icon" style="font-size:1.375rem"></i>
-        </div>
-        <h3 class="mt-4 font-semibold">Tratamento de óleo combustível</h3>
-        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+      <a href="/tratamento-de-oleo-combustivel/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="font-mono text-xs text-verde-texto">COMB</span>
+        <span>
+          <span class="block text-lg font-semibold group-hover:text-verde-texto">Tratamento de óleo combustível</span>
+          <span class="mt-1 block max-w-medida text-sm text-aco">enxofre · cinzas · viscosidade · água e sedimentos</span>
+        </span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="orcamento" class="py-16 sm:py-20">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="relative rounded-2xl overflow-hidden shadow-elegant bg-gradient-hero p-8 sm:p-12 text-primary-foreground">
-      <h2 class="text-2xl sm:text-3xl font-bold max-w-2xl">Precisa de tratamento de água de caldeiras na sua planta?</h2>
-      <p class="mt-4 max-w-2xl opacity-95 leading-relaxed">Nossa equipe técnica avalia o seu sistema e apresenta o programa químico adequado. Atendemos indústrias em Minas Gerais desde 1993, a partir de Nova Lima.</p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="/#contato" class="button-zoom inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-primary font-semibold hover:opacity-90 transition">
-          Solicite um Orçamento <i data-lucide="send" class="icon"></i>
-        </a>
-        <a href="tel:+5531992247394" class="button-zoom inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/40 font-semibold hover:bg-white/10 transition">
-          <i data-lucide="phone" class="icon"></i> +55 (31) 99224-7394
-        </a>
-      </div>
+<section id="orcamento" class="bg-verde-fundo">
+  <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <h2 class="max-w-medida text-2xl font-bold text-sobre-verde">Precisa de tratamento de água de caldeiras na sua planta?</h2>
+    <p class="mt-4 max-w-medida text-sobre-verde-dim">Nossa equipe técnica avalia o seu sistema e apresenta o programa químico adequado. Atendemos indústrias em Minas Gerais desde 1993, a partir de Nova Lima.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/#contato" class="acao bg-verde px-5 py-3 font-semibold text-white hover:bg-white hover:text-verde-fundo">Solicitar avaliação técnica</a>
+      <a href="tel:+5531992247394" class="acao border border-sobre-verde-dim/50 px-5 py-3 font-semibold text-sobre-verde hover:border-sobre-verde">+55 (31) 99224-7394</a>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="bg-foreground text-white py-12">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="bg-white inline-flex p-2 rounded-lg"><img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-12 w-auto" /></div>
-        <p class="mx-auto mt-4 max-w-xs text-sm opacity-70">Especialistas em tratamento de água industrial desde 1993. Nova Lima, MG.</p>
+<footer class="bg-verde-fundo text-sobre-verde">
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <div class="inline-flex bg-white p-2"><img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-10 w-auto" /></div>
+        <p class="mt-5 max-w-xs text-sm text-sobre-verde-dim">Tratamento de água industrial desde 1993. Nova Lima, Minas Gerais.</p>
       </div>
       <div>
-        <h2 class="font-semibold mb-3">Soluções</h2>
-        <ul class="space-y-2 text-sm opacity-80">
-          <li><a href="/tratamento-de-agua-de-caldeiras/" class="hover:opacity-100 transition">Caldeiras</a></li>
-          <li><a href="/tratamento-de-agua-de-torres-de-resfriamento/" class="hover:opacity-100 transition">Torres de resfriamento</a></li>
-          <li><a href="/tratamento-de-efluentes-industriais/" class="hover:opacity-100 transition">Efluentes</a></li>
-          <li><a href="/tratamento-de-agua-gelada/" class="hover:opacity-100 transition">Água gelada</a></li>
-          <li><a href="/abrandadores-e-desmineralizadores/" class="hover:opacity-100 transition">Abrandadores</a></li>
-          <li><a href="/tratamento-de-oleo-combustivel/" class="hover:opacity-100 transition">Óleo combustível</a></li>
+        <h2 class="font-mono text-xs text-sobre-verde-dim">ÁREAS DE ATUAÇÃO</h2>
+        <ul class="mt-4 grid gap-2 text-sm">
+          <li><a href="/tratamento-de-agua-de-caldeiras/" class="hover:text-verde-claro">Caldeiras</a></li>
+          <li><a href="/tratamento-de-agua-de-torres-de-resfriamento/" class="hover:text-verde-claro">Torres de resfriamento</a></li>
+          <li><a href="/tratamento-de-efluentes-industriais/" class="hover:text-verde-claro">Efluentes</a></li>
+          <li><a href="/tratamento-de-agua-gelada/" class="hover:text-verde-claro">Água gelada</a></li>
+          <li><a href="/abrandadores-e-desmineralizadores/" class="hover:text-verde-claro">Abrandadores</a></li>
+          <li><a href="/tratamento-de-oleo-combustivel/" class="hover:text-verde-claro">Óleo combustível</a></li>
         </ul>
       </div>
       <div>
-        <h2 class="font-semibold mb-3">Contato</h2>
-        <div class="flex flex-col gap-2">
-          <a href="mailto:scherr@scherr.com.br" class="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100">
-            <i data-lucide="mail" class="icon"></i>
-            scherr@scherr.com.br
-          </a>
-          <a href="tel:+5531992247394" class="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100">
-            <i data-lucide="phone" class="icon"></i>
-            +55 31 99224-7394
-          </a>
-          <a href="tel:+5531992064484" class="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100">
-            <i data-lucide="phone" class="icon"></i>
-            +55 31 99206-4484
-          </a>
-          <a href="/#contato" class="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100">
-            <i data-lucide="map-pin" class="icon"></i>
-            Av. Canadá, 283 - Nova Lima, MG
-          </a>
-        </div>
+        <h2 class="font-mono text-xs text-sobre-verde-dim">CONTATO</h2>
+        <ul class="mt-4 grid gap-2 text-sm">
+          <li><a href="mailto:scherr@scherr.com.br" class="hover:text-verde-claro">scherr@scherr.com.br</a></li>
+          <li><a href="tel:+5531992247394" class="hover:text-verde-claro">+55 (31) 99224-7394</a></li>
+          <li><a href="tel:+5531992064484" class="hover:text-verde-claro">+55 (31) 99206-4484</a></li>
+          <li class="text-sobre-verde-dim">Av. Canadá, 283 — Nova Lima, MG</li>
+        </ul>
       </div>
     </div>
-    <div class="mt-10 pt-6 border-t border-white/10 text-sm opacity-60 text-center">
-      © <span id="year"></span> Scherr Química Ltda. Todos os direitos reservados.
-    </div>
+    <p class="mt-12 border-t border-white/15 pt-6 text-sm text-sobre-verde-dim">© <span id="year"></span> Scherr Química Ltda. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<script defer src="https://unpkg.com/lucide@1.28.0/dist/umd/lucide.min.js"></script>
-<script defer src="/script.js?v=20260903-seo"></script>
-<a href="https://wa.me/5531992247394?text=Olá%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Scherr%20Química." target="_blank" rel="noopener noreferrer" class="button-zoom fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition sm:bottom-6 sm:right-6 sm:h-14 sm:w-14" aria-label="Falar pelo WhatsApp">
+<script defer src="/script.js?v=20260903-verde"></script>
+<a href="https://wa.me/5531992247394?text=Olá%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20Scherr%20Química." target="_blank" rel="noopener noreferrer" class="acao fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 z-[100] flex h-12 w-12 items-center justify-center rounded-full bg-verde text-white shadow-lg hover:bg-verde-fundo sm:bottom-6 sm:right-6 sm:h-14 sm:w-14" aria-label="Falar pelo WhatsApp">
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
     <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
   </svg>

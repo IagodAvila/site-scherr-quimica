@@ -7,32 +7,29 @@ const mobileMenuButton = document.getElementById("mobileMenuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 
 if (mobileMenuButton && mobileMenu) {
+  const iconAbrir = mobileMenuButton.querySelector("[data-icone='abrir']");
+  const iconFechar = mobileMenuButton.querySelector("[data-icone='fechar']");
+
   const setMobileMenuOpen = (isOpen) => {
-    mobileMenu.classList.toggle("hidden", !isOpen);
+    mobileMenu.hidden = !isOpen;
     mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
     mobileMenuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
-
-    const icon = mobileMenuButton.querySelector("[data-lucide]");
-    if (icon) {
-      icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
-      if (window.lucide) {
-        lucide.createIcons();
-      }
-    }
+    if (iconAbrir) iconAbrir.hidden = isOpen;
+    if (iconFechar) iconFechar.hidden = !isOpen;
   };
 
-  mobileMenuButton.addEventListener("click", () => {
-    setMobileMenuOpen(mobileMenu.classList.contains("hidden"));
-  });
-
+  mobileMenuButton.addEventListener("click", () => setMobileMenuOpen(mobileMenu.hidden));
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => setMobileMenuOpen(false));
   });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !mobileMenu.hidden) {
       setMobileMenuOpen(false);
+      mobileMenuButton.focus();
     }
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) setMobileMenuOpen(false);
   });
 }
 
@@ -42,8 +39,9 @@ if (contactForm) {
 
   const showFeedback = (text, tone) => {
     feedback.textContent = text;
-    feedback.classList.remove("hidden", "text-muted-foreground", "text-red-600");
-    feedback.classList.add(tone === "error" ? "text-red-600" : "text-muted-foreground");
+    feedback.hidden = false;
+    feedback.classList.remove("text-aco", "text-ambar");
+    feedback.classList.add(tone === "error" ? "text-ambar" : "text-aco");
   };
 
   contactForm.addEventListener("submit", (event) => {
@@ -55,18 +53,13 @@ if (contactForm) {
     const message = form.message.value.trim();
 
     if (!name || !email || !message) {
-      showFeedback("Preencha todos os campos obrigatórios.", "error");
+      showFeedback("Preencha nome, email e mensagem para enviar.", "error");
       return;
     }
 
     const subject = encodeURIComponent(`Contato do site - ${name}`);
     const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\n${message}`);
-
     window.location.href = `mailto:scherr@scherr.com.br?subject=${subject}&body=${body}`;
-    showFeedback("Abrindo seu cliente de email...", "info");
+    showFeedback("Abrindo seu programa de email com a mensagem pronta.", "info");
   });
-}
-
-if (window.lucide) {
-  lucide.createIcons();
 }

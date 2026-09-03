@@ -4,6 +4,8 @@
 PAGES = [
 {
  "slug": "tratamento-de-agua-de-caldeiras",
+ "cod": "CALD",
+ "params": "O₂ dissolvido · pH · condutividade · alcalinidade",
  "frase": "tratamento de água de caldeiras",
  "icon": "flame",
  "nav": "Caldeiras",
@@ -57,6 +59,8 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-agua-de-torres-de-resfriamento",
+ "cod": "TORR",
+ "params": "ciclos de concentração · UFC/mL · índice de saturação",
  "frase": "tratamento de água de torres de resfriamento",
  "icon": "droplets",
  "nav": "Torres de resfriamento",
@@ -111,6 +115,8 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-efluentes-industriais",
+ "cod": "EFLU",
+ "params": "DQO · sólidos suspensos · pH · turbidez",
  "frase": "tratamento de efluentes industriais",
  "icon": "recycle",
  "nav": "Efluentes",
@@ -164,6 +170,8 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-agua-gelada",
+ "cod": "GELA",
+ "params": "concentração de inibidor · UFC/mL · pH",
  "frase": "tratamento de água gelada",
  "icon": "snowflake",
  "nav": "Água gelada",
@@ -217,6 +225,8 @@ PAGES = [
 },
 {
  "slug": "abrandadores-e-desmineralizadores",
+ "cod": "DESM",
+ "params": "dureza residual · sílica · condutividade",
  "frase": "abrandamento e desmineralização de água",
  "icon": "flask-conical",
  "nav": "Abrandadores",
@@ -270,6 +280,8 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-oleo-combustivel",
+ "cod": "COMB",
+ "params": "enxofre · cinzas · viscosidade · água e sedimentos",
  "frase": "tratamento de óleo combustível",
  "icon": "fuel",
  "nav": "Óleo combustível",
