@@ -160,8 +160,8 @@ def build(page, others):
           <i data-lucide="%s" class="icon" style="font-size:1.375rem"></i>
         </div>
         <h3 class="mt-4 font-semibold">%s</h3>
-        <p class="mt-1 text-sm text-muted-foreground">%s</p>
-      </a>''' % (o['slug'], o['icon'], esc(o['h1']), esc(o['nav'])) for o in others)
+        <span class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">Ver página <i data-lucide="arrow-right" class="icon transition-transform group-hover:translate-x-1"></i></span>
+      </a>''' % (o['slug'], o['icon'], esc(o['h1'])) for o in others)
 
     footer_links = '\n'.join(
       '          <li><a href="/%s/" class="hover:opacity-100 transition">%s</a></li>' % (p['slug'], esc(p['nav']))
@@ -316,7 +316,7 @@ def build(page, others):
   <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
     <div class="mb-10">
       <p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">Dúvidas frequentes</p>
-      <h2 class="text-2xl sm:text-3xl font-bold">Perguntas sobre {nav_lower}</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold">Perguntas sobre {frase}</h2>
     </div>
     <div class="space-y-4">
 {faq_items}
@@ -341,7 +341,7 @@ def build(page, others):
 <section id="orcamento" class="py-16 sm:py-20">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="relative rounded-2xl overflow-hidden shadow-elegant bg-gradient-hero p-8 sm:p-12 text-primary-foreground">
-      <h2 class="text-2xl sm:text-3xl font-bold max-w-2xl">Precisa de {nav_lower} na sua planta?</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold max-w-2xl">Precisa de {frase} na sua planta?</h2>
       <p class="mt-4 max-w-2xl opacity-95 leading-relaxed">Nossa equipe técnica avalia o seu sistema e apresenta o programa químico adequado. Atendemos indústrias em Minas Gerais desde 1993, a partir de Nova Lima.</p>
       <div class="mt-8 flex flex-wrap gap-4">
         <a href="/#contato" class="button-zoom inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-primary font-semibold hover:opacity-90 transition">
@@ -367,7 +367,7 @@ def build(page, others):
     title=esc(page['title']), desc=esc(page['desc']), url=url, base=BASE,
     img=page['img'], img_alt=esc(page['img_alt']),
     ld=json.dumps(ld, ensure_ascii=False, indent=2),
-    header=HEADER, nav=esc(page['nav']), nav_lower=esc(page['nav'][0].lower() + page['nav'][1:]),
+    header=HEADER, nav=esc(page['nav']), frase=esc(page['frase']),
     icon=page['icon'], h1=esc(page['h1']), lead=esc(page['lead']),
     problem_h2=esc(page['problem_h2']), problem_p=esc(page['problem_p']),
     problem_cards=problem_cards, how_h2=esc(page['how_h2']), how_steps=how_steps,

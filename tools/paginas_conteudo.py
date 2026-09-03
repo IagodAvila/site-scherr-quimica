@@ -4,6 +4,7 @@
 PAGES = [
 {
  "slug": "tratamento-de-agua-de-caldeiras",
+ "frase": "tratamento de água de caldeiras",
  "icon": "flame",
  "nav": "Caldeiras",
  "title": "Tratamento de Água de Caldeiras e Geradores de Vapor | Scherr",
@@ -56,6 +57,7 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-agua-de-torres-de-resfriamento",
+ "frase": "tratamento de água de torres de resfriamento",
  "icon": "droplets",
  "nav": "Torres de resfriamento",
  "title": "Tratamento de Água de Torres de Resfriamento | Scherr Química",
@@ -109,6 +111,7 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-efluentes-industriais",
+ "frase": "tratamento de efluentes industriais",
  "icon": "recycle",
  "nav": "Efluentes",
  "title": "Tratamento de Efluentes Industriais | Produtos Químicos | Scherr",
@@ -161,6 +164,7 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-agua-gelada",
+ "frase": "tratamento de água gelada",
  "icon": "snowflake",
  "nav": "Água gelada",
  "title": "Tratamento de Água Gelada e Circuitos de Chiller | Scherr",
@@ -213,6 +217,7 @@ PAGES = [
 },
 {
  "slug": "abrandadores-e-desmineralizadores",
+ "frase": "abrandamento e desmineralização de água",
  "icon": "flask-conical",
  "nav": "Abrandadores",
  "title": "Abrandadores, Desmineralizadores e Água de Alta Pureza | Scherr",
@@ -265,6 +270,7 @@ PAGES = [
 },
 {
  "slug": "tratamento-de-oleo-combustivel",
+ "frase": "tratamento de óleo combustível",
  "icon": "fuel",
  "nav": "Óleo combustível",
  "title": "Tratamento de Óleo Combustível | Aditivos Químicos | Scherr",
