@@ -206,8 +206,8 @@ def build(page, others):
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" media="print" onload="this.media=\'all\'" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" /></noscript>
-<link rel="stylesheet" href="/assets/app.css" />
-<link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="/assets/app.css?v=20260903-motion" />
+<link rel="stylesheet" href="/style.css?v=20260903-motion" />
 </head>
 <body class="bg-papel text-tinta">
 
