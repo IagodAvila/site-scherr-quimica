@@ -41,3 +41,8 @@ body {
   display: inline-block;
   vertical-align: -0.125em;
 }
+
+/* FAQ: remove o marcador nativo do <summary> (Safari/iOS ignora list-style) */
+summary::-webkit-details-marker {
+  display: none;
+}

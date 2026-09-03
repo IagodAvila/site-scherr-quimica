@@ -107,20 +107,44 @@ Entre na pasta:
 cd site-scherr-quimica
 ```
 
-Abra o arquivo **index.html** em seu navegador ou utilize a extensão **Live Server** do Visual Studio Code.
-
-### Alterando estilos (Tailwind)
-
-O CSS não é mais gerado via CDN em tempo de execução — ele é compilado para `assets/app.css` e commitado no
-repositório, para o site continuar 100% estático no GitHub Pages. Sempre que uma classe do Tailwind for
-adicionada/alterada em algum `.html`, rode:
+Instale as dependências e suba o ambiente local:
 
 ```bash
 npm install      # só na primeira vez
-npm run build:css
+npm run dev      # http://localhost:8080
 ```
 
-Durante o desenvolvimento, `npm run watch:css` recompila automaticamente a cada alteração.
+O `npm run dev` sobe um servidor estático **e** deixa o Tailwind recompilando a cada alteração.
+Ctrl+C encerra os dois.
+
+> **Não abra o `index.html` por `file://`.** As páginas de serviço usam caminhos absolutos
+> (`/assets/app.css`, `/tratamento-de-agua-de-caldeiras/`), que só resolvem sob um servidor.
+> O **Live Server** do VS Code também funciona, desde que a pasta aberta seja a raiz do projeto.
+
+### Scripts
+
+| Script | O que faz |
+| --- | --- |
+| `npm run dev` | Servidor em `localhost:8080` + Tailwind em watch |
+| `npm run serve` | Só o servidor estático |
+| `npm run watch:css` | Só o Tailwind em watch |
+| `npm run build:css` | Compila `assets/app.css` **minificado** |
+| `npm run build` | Regera as páginas de serviço e compila o CSS minificado |
+
+> ⚠️ O `npm run dev` grava o `assets/app.css` **sem minificar**. Rode `npm run build:css`
+> antes de commitar, senão vai um CSS inflado para o repositório.
+
+### Alterando estilos (Tailwind)
+
+O CSS não é gerado via CDN em tempo de execução — ele é compilado para `assets/app.css` e commitado no
+repositório, para o site continuar 100% estático no GitHub Pages. O Tailwind varre `./*.html` e `./*/*.html`
+(veja `tailwind.config.js`); uma classe usada em um arquivo fora desses padrões **não entra no CSS**.
+
+### Páginas de serviço
+
+As 6 páginas em `/tratamento-de-agua-de-caldeiras/`, `/tratamento-de-efluentes-industriais/` etc. são
+**geradas**, não editadas à mão — elas compartilham header, rodapé, CTA e JSON-LD. O texto de cada uma fica
+em `tools/paginas_conteudo.py`. Veja [`tools/README.md`](tools/README.md).
 
 ### Formulário de contato
 

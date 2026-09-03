@@ -4,8 +4,11 @@
   "description": "Website institucional da Scherr Química.",
   "private": true,
   "scripts": {
+    "dev": "trap 'kill 0' EXIT INT TERM; tailwindcss -i ./src/input.css -o ./assets/app.css --watch=always & python3 -m http.server 8080",
+    "serve": "python3 -m http.server 8080",
     "build:css": "tailwindcss -i ./src/input.css -o ./assets/app.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/app.css --watch"
+    "watch:css": "tailwindcss -i ./src/input.css -o ./assets/app.css --watch",
+    "build": "npm run build:css && python3 tools/gerar_paginas.py && npm run build:css"
   },
   "repository": {
     "type": "git",
