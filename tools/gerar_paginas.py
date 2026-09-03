@@ -7,6 +7,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://scherr.com.br'
 ORG  = BASE + '/#organization'
 
+# Descricao institucional unica, a mesma usada no Perfil da Empresa no Google.
+ORG_DESC = (
+    "A Scherr Química atua desde 1993 no tratamento de água industrial, em Nova Lima (MG). Fornecemos produtos químicos e assistência técnica para geradores de vapor (caldeiras), torres de resfriamento, água gelada, efluentes industriais, óleo combustível e sistemas de abrandamento e desmineralização. Temos laboratório químico próprio para análises de água e de depósito, contagem microbiológica e determinação de taxas de corrosão em corpos de prova. O atendimento inclui relatórios periódicos, inspeções, limpezas químicas em caldeiras, trocadores de calor e torres, e equipamentos de dosagem em comodato. Empresa certificada NSF e ganhadora do Prêmio Fornecedores Vale na categoria Meio Ambiente."
+)
+
 def esc(t):
     return t.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
 
@@ -106,6 +111,7 @@ def build(page, others):
        "logo": BASE + "/assets/logo-scherr-horizontal.png",
        "telephone": "+55 31 3297-6161", "email": "scherr@scherr.com.br",
        "foundingDate": "1993",
+       "description": ORG_DESC,
        "address": {"@type": "PostalAddress", "streetAddress": "Av. Canadá, 283",
                    "addressLocality": "Nova Lima", "addressRegion": "MG", "addressCountry": "BR"},
        "areaServed": [{"@type": "AdministrativeArea", "name": "Minas Gerais"},

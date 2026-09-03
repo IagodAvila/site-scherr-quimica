@@ -115,7 +115,7 @@ PAGES = [
  "icon": "recycle",
  "nav": "Efluentes",
  "title": "Tratamento de Efluentes Industriais | Produtos Químicos | Scherr",
- "desc": "Coagulantes, floculantes e polímeros para tratamento físico-químico de efluentes industriais, com monitoramento operacional e químico das estações de tratamento.",
+ "desc": "Coagulantes, floculantes e polímeros para tratamento físico-químico de efluentes industriais, com monitoramento operacional e químico da estação.",
  "h1": "Tratamento de efluentes industriais",
  "lead": "Coagulantes, floculantes e polímeros para tratamento físico-químico de efluentes industriais, acompanhados do monitoramento operacional e químico da estação — para enquadramento no padrão de lançamento e redução do volume de lodo gerado.",
  "service_name": "Tratamento de efluentes industriais",
