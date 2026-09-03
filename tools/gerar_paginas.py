@@ -27,7 +27,7 @@ HEADER = '''<header class="sticky top-0 z-50 border-b border-fio bg-papel/95 bac
       <a href="/#setores" class="header-nav-link">Setores</a>
       <a href="/#contato" class="header-nav-link">Contato</a>
     </nav>
-    <a href="/#contato" class="acao hidden bg-verde px-4 py-2 text-sm font-semibold text-white hover:bg-verde-fundo lg:inline-flex">Solicitar avaliação</a>
+    <a href="/#contato" class="acao acao-varre hidden bg-verde px-4 py-2 text-sm font-semibold text-white lg:inline-flex">Solicitar avaliação</a>
     <button id="mobileMenuButton" type="button" class="acao inline-flex h-10 w-10 items-center justify-center border border-fio-forte text-tinta hover:bg-superficie lg:hidden" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
       <svg data-icone="abrir" class="icon h-5 w-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       <svg data-icone="fechar" class="icon h-5 w-5" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -40,7 +40,7 @@ HEADER = '''<header class="sticky top-0 z-50 border-b border-fio bg-papel/95 bac
       <a href="/#sobre" class="border-b border-fio py-4 font-medium">Sobre</a>
       <a href="/#setores" class="border-b border-fio py-4 font-medium">Setores</a>
       <a href="/#contato" class="border-b border-fio py-4 font-medium">Contato</a>
-      <a href="/#contato" class="acao my-4 bg-verde px-4 py-3 text-center font-semibold text-white">Solicitar avaliação</a>
+      <a href="/#contato" class="acao acao-varre my-4 bg-verde px-4 py-3 text-center font-semibold text-white">Solicitar avaliação</a>
     </nav>
   </div>
 </header>'''
@@ -125,13 +125,13 @@ def build(page, others):
     ]}
 
     problem_cards = '\n'.join(
-      '''      <div class="border-b border-fio py-5">
+      '''      <div class="linha-spec border-b border-fio py-5">
         <dt class="text-lg font-semibold">%s</dt>
         <dd class="mt-2 max-w-medida text-sm text-aco">%s</dd>
       </div>''' % (esc(t), esc(d)) for t, d in page['problem_items'])
 
     how_steps = '\n'.join(
-      '''      <li class="grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
+      '''      <li class="linha-spec grid grid-cols-[36px_minmax(0,1fr)] gap-x-4 border-b border-fio py-5">
         <span class="font-mono text-xs text-verde-texto">%02d</span>
         <span>
           <span class="block text-lg font-semibold">%s</span>
@@ -144,7 +144,7 @@ def build(page, others):
       for i in page['prod_items'])
 
     result_cards = '\n'.join(
-      '''      <div class="border-b border-fio py-5">
+      '''      <div class="linha-spec border-b border-fio py-5">
         <dt class="font-semibold">%s</dt>
         <dd class="mt-2 text-sm text-aco">%s</dd>
       </div>''' % (esc(t), esc(d)) for t, d in page['results_items'])
@@ -159,8 +159,8 @@ def build(page, others):
       </details>''' % (esc(q), esc(a)) for q, a in page['faq'])
 
     related = '\n'.join(
-      '''      <a href="/%s/" class="group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
-        <span class="font-mono text-xs text-verde-texto">%s</span>
+      '''      <a href="/%s/" class="linha-area group grid grid-cols-[52px_minmax(0,1fr)] items-baseline gap-x-5 border-b border-fio py-5 sm:grid-cols-[64px_minmax(0,1fr)]">
+        <span class="cod font-mono text-xs text-verde-texto">%s</span>
         <span>
           <span class="block text-lg font-semibold group-hover:text-verde-texto">%s</span>
           <span class="mt-1 block max-w-medida text-sm text-aco">%s</span>
@@ -168,7 +168,7 @@ def build(page, others):
       </a>''' % (o['slug'], o['cod'], esc(o['h1']), esc(o['params'])) for o in others)
 
     footer_links = '\n'.join(
-      '          <li><a href="/%s/" class="hover:text-verde-claro">%s</a></li>' % (q['slug'], esc(q['nav']))
+      '          <li><a href="/%s/" class="link-desliza hover:text-verde-claro">%s</a></li>' % (q['slug'], esc(q['nav']))
       for q in PAGES)
 
     return '''<!doctype html>
@@ -231,15 +231,15 @@ def build(page, others):
     <div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:items-center lg:gap-14">
       <div>
         <p class="font-mono text-xs text-verde-claro">{cod}</p>
-        <h1 class="mt-3 text-3xl font-bold text-sobre-verde sm:text-4xl">{h1}</h1>
-        <p class="mt-5 max-w-medida text-base text-sobre-verde-dim">{lead}</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/#contato" class="acao bg-verde px-5 py-3 font-semibold text-white hover:bg-white hover:text-verde-fundo">Solicitar avaliação técnica</a>
+        <h1 class="entra mt-3 text-3xl font-bold text-sobre-verde sm:text-4xl">{h1}</h1>
+        <p class="entra entra-2 mt-5 max-w-medida text-base text-sobre-verde-dim">{lead}</p>
+        <div class="entra entra-3 mt-8 flex flex-wrap gap-3">
+          <a href="/#contato" class="acao acao-varre acao-varre-claro bg-verde px-5 py-3 font-semibold text-white">Solicitar avaliação técnica</a>
           <a href="https://wa.me/5531992247394" target="_blank" rel="noopener noreferrer" class="acao border border-sobre-verde-dim/50 px-5 py-3 font-semibold text-sobre-verde hover:border-sobre-verde">Falar com um técnico</a>
         </div>
         <p class="mt-8 font-mono text-xs text-sobre-verde-dim">PARÂMETROS DE CONTROLE · {params}</p>
       </div>
-      <img src="/assets/{img}" alt="{img_alt}" width="{img_w}" height="{img_h}" fetchpriority="high" class="h-56 w-full object-cover sm:h-72 lg:h-80" />
+      <div class="zoom-suave entra entra-4"><img src="/assets/{img}" alt="{img_alt}" width="{img_w}" height="{img_h}" fetchpriority="high" class="h-56 w-full object-cover sm:h-72 lg:h-80" /></div>
     </div>
   </div>
 </section>
@@ -305,7 +305,7 @@ def build(page, others):
 <section id="outras-areas" class="border-t border-fio bg-superficie">
   <div class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
     <h2 class="max-w-medida text-2xl font-bold">Outras áreas de atuação</h2>
-    <div class="mt-10 border-t-[3px] border-verde">
+    <div class="lista-areas mt-10 border-t-[3px] border-verde">
 {related}
     </div>
   </div>
@@ -316,7 +316,7 @@ def build(page, others):
     <h2 class="max-w-medida text-2xl font-bold text-sobre-verde">Precisa de {frase} na sua planta?</h2>
     <p class="mt-4 max-w-medida text-sobre-verde-dim">Nossa equipe técnica avalia o seu sistema e apresenta o programa químico adequado. Atendemos indústrias em Minas Gerais desde 1993. Nossa sede fica em Nova Lima.</p>
     <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/#contato" class="acao bg-verde px-5 py-3 font-semibold text-white hover:bg-white hover:text-verde-fundo">Solicitar avaliação técnica</a>
+      <a href="/#contato" class="acao acao-varre acao-varre-claro bg-verde px-5 py-3 font-semibold text-white">Solicitar avaliação técnica</a>
       <a href="tel:+5531992247394" class="acao border border-sobre-verde-dim/50 px-5 py-3 font-semibold text-sobre-verde hover:border-sobre-verde">+55 (31) 99224-7394</a>
     </div>
   </div>
