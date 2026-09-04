@@ -240,6 +240,8 @@ textarea:focus {
 .acao-varre { transition: color 220ms ease, border-color 220ms ease; }
 .acao-varre::before { transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1); }
 
+/* Único elemento isento do bloco reduced-motion abaixo, a pedido:
+   este CTA sempre cresce e sobe no hover, mesmo com menos movimento. */
 .acao-contorno {
   transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1),
     border-color 200ms ease, color 200ms ease, background-color 200ms ease;
@@ -296,7 +298,6 @@ a[aria-label="Falar pelo WhatsApp"]:hover { transform: scale(1.08) rotate(-4deg)
   .linha-area .params,
   .acao-varre,
   .acao-varre::before,
-  .acao-contorno,
   .header-nav-link::after,
   .linha-spec::before,
   details summary,
@@ -318,11 +319,6 @@ a[aria-label="Falar pelo WhatsApp"]:hover { transform: scale(1.08) rotate(-4deg)
   .link-desliza:hover,
   .zoom-suave:hover img,
   a[aria-label="Falar pelo WhatsApp"]:hover {
-    transform: none;
-  }
-  .acao-contorno:hover,
-  .acao-contorno:focus-visible,
-  .acao-contorno:active {
     transform: none;
   }
   details[open] > p { animation: none; }
