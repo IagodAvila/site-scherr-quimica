@@ -246,7 +246,7 @@ textarea:focus {
 }
 .acao-contorno:hover,
 .acao-contorno:focus-visible,
-.acao-contorno:active { transform: translateY(-2px); }
+.acao-contorno:active { transform: translateY(-2px) scale(1.03); }
 
 .header-nav-link::after { transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1); }
 
