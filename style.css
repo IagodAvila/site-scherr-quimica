@@ -61,13 +61,7 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+
 
 /* ============================================================
    INTERAÇÃO E MOVIMENTO
@@ -220,95 +214,59 @@ textarea:focus {
 
 /* ---------- 2. MOVIMENTO (só se permitido) ---------- */
 
+/* ---------- 2. MOVIMENTO ----------
+   As transições valem sempre: retorno de interface não é enfeite.
+   O bloco reduce mais abaixo encurta a duração e desliga o que
+   desloca ou escala de verdade. */
+
+.linha-area { transition: background-color 220ms ease, opacity 220ms ease; }
+.linha-area::after { transition: width 340ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+.linha-area .cod { transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+.linha-area:hover .cod,
+.linha-area:focus-visible .cod { transform: translateX(4px); }
+.linha-area .params { transition: opacity 260ms ease, color 260ms ease; }
+
+.linha-spec { transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+.linha-spec::before { transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+.linha-spec:hover { transform: translateX(5px); }
+
+.acao-varre { transition: color 220ms ease, border-color 220ms ease; }
+.acao-varre::before { transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+
+.acao-contorno {
+  transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1),
+    border-color 200ms ease, color 200ms ease, background-color 200ms ease;
+}
+.acao-contorno:hover,
+.acao-contorno:focus-visible { transform: translateY(-2px); }
+
+.header-nav-link::after { transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+
+.zoom-suave img { transition: transform 800ms cubic-bezier(0.2, 0.7, 0.3, 1); }
+.zoom-suave:hover img { transform: scale(1.045); }
+
+details summary { transition: color 200ms ease; }
+details[open] > p { animation: revela 340ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+@keyframes revela {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.link-desliza { transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1), color 200ms ease; }
+.link-desliza:hover,
+.link-desliza:focus-visible { transform: translateX(4px); }
+
+input, textarea { transition: border-color 220ms ease, box-shadow 220ms ease; }
+
+a[aria-label="Falar pelo WhatsApp"] {
+  transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1), background-color 220ms ease;
+}
+a[aria-label="Falar pelo WhatsApp"]:hover { transform: scale(1.08) rotate(-4deg); }
+
+/* Entrada do herói: um único momento orquestrado, só se o
+   visitante não pediu menos movimento. */
 @media (prefers-reduced-motion: no-preference) {
-  .linha-area {
-    transition: background-color 220ms ease, opacity 220ms ease;
-  }
-  .linha-area::after {
-    transition: width 340ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-  .linha-area .cod {
-    transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-  .linha-area:hover .cod,
-  .linha-area:focus-visible .cod {
-    transform: translateX(4px);
-  }
-  .linha-area .params {
-    transition: opacity 260ms ease, color 260ms ease;
-  }
-
-  .linha-spec {
-    transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-  .linha-spec::before {
-    transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-  .linha-spec:hover {
-    transform: translateX(5px);
-  }
-
-  .acao-varre {
-    transition: color 220ms ease, border-color 220ms ease;
-  }
-  .acao-varre::before {
-    transition: transform 400ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-
-  .acao-contorno {
-    transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1),
-      border-color 200ms ease, color 200ms ease, background-color 200ms ease;
-  }
-  .acao-contorno:hover,
-  .acao-contorno:focus-visible {
-    transform: translateY(-2px);
-  }
-
-  .header-nav-link::after {
-    transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-
-  .zoom-suave img {
-    transition: transform 800ms cubic-bezier(0.2, 0.7, 0.3, 1);
-  }
-  .zoom-suave:hover img {
-    transform: scale(1.045);
-  }
-
-  details[open] > p {
-    animation: revela 340ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
-  }
-  @keyframes revela {
-    from { opacity: 0; transform: translateY(-6px); }
-    to { opacity: 1; transform: none; }
-  }
-  details summary {
-    transition: color 200ms ease;
-  }
-
-  .link-desliza {
-    transition: transform 240ms cubic-bezier(0.2, 0.7, 0.3, 1), color 200ms ease;
-  }
-  .link-desliza:hover,
-  .link-desliza:focus-visible {
-    transform: translateX(4px);
-  }
-
-  input,
-  textarea {
-    transition: border-color 220ms ease, box-shadow 220ms ease;
-  }
-
-  a[aria-label="Falar pelo WhatsApp"] {
-    transition: transform 280ms cubic-bezier(0.2, 0.7, 0.3, 1), background-color 220ms ease;
-  }
-  a[aria-label="Falar pelo WhatsApp"]:hover {
-    transform: scale(1.08) rotate(-4deg);
-  }
-
-  .entra {
-    animation: entra 640ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
-  }
+  .entra { animation: entra 640ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
   .entra-2 { animation-delay: 80ms; }
   .entra-3 { animation-delay: 160ms; }
   .entra-4 { animation-delay: 240ms; }
@@ -316,4 +274,47 @@ textarea:focus {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: none; }
   }
+}
+
+/* ---------- 3. MENOS MOVIMENTO ----------
+   Encurta em vez de aniquilar, e desliga só o que desloca ou
+   escala de verdade. O botão continua respondendo ao cursor. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .linha-area,
+  .linha-area::after,
+  .linha-area .params,
+  .acao-varre,
+  .acao-varre::before,
+  .acao-contorno,
+  .header-nav-link::after,
+  .linha-spec::before,
+  details summary,
+  input,
+  textarea {
+    transition-duration: 120ms;
+  }
+
+  /* Deslocamento e escala saem; a mudança de cor e de estado fica. */
+  .linha-area .cod,
+  .linha-spec,
+  .link-desliza,
+  .zoom-suave img,
+  a[aria-label="Falar pelo WhatsApp"] {
+    transition: none;
+  }
+  .linha-area:hover .cod,
+  .linha-spec:hover,
+  .link-desliza:hover,
+  .zoom-suave:hover img,
+  a[aria-label="Falar pelo WhatsApp"]:hover {
+    transform: none;
+  }
+  .acao-contorno:hover,
+  .acao-contorno:focus-visible {
+    transform: none;
+  }
+  details[open] > p { animation: none; }
 }
