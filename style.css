@@ -50,6 +50,12 @@ h1, h2, h3 {
   display: inline-block;
   vertical-align: -0.125em;
 }
+/* [hidden] e .icon empatam em especificidade (0,1,0); sem isto, quem
+   carrega por último (.icon, vindo depois do preflight) vence e o
+   ícone escondido continua visível mesmo com o atributo hidden. */
+.icon[hidden] {
+  display: none;
+}
 
 /* Foco visível em toda a navegação por teclado. */
 :focus-visible {
@@ -164,7 +170,8 @@ summary::-webkit-details-marker {
    Mecânica diferente do primário de propósito — preencher os dois
    deixava o par indistinguível sob o cursor. */
 .acao-contorno:hover,
-.acao-contorno:focus-visible {
+.acao-contorno:focus-visible,
+.acao-contorno:active {
   border-color: #2fd08c;
   color: #2fd08c;
   background-color: rgba(47, 208, 140, 0.1);
@@ -238,7 +245,8 @@ textarea:focus {
     border-color 200ms ease, color 200ms ease, background-color 200ms ease;
 }
 .acao-contorno:hover,
-.acao-contorno:focus-visible { transform: translateY(-2px); }
+.acao-contorno:focus-visible,
+.acao-contorno:active { transform: translateY(-2px); }
 
 .header-nav-link::after { transition: transform 260ms cubic-bezier(0.2, 0.7, 0.3, 1); }
 
@@ -313,7 +321,8 @@ a[aria-label="Falar pelo WhatsApp"]:hover { transform: scale(1.08) rotate(-4deg)
     transform: none;
   }
   .acao-contorno:hover,
-  .acao-contorno:focus-visible {
+  .acao-contorno:focus-visible,
+  .acao-contorno:active {
     transform: none;
   }
   details[open] > p { animation: none; }
