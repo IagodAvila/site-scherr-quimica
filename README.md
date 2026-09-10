@@ -27,7 +27,7 @@ https://iagodavila.github.io/site-scherr-quimica/
 
 ## 📸 Preview
 
-![Demonstração do site Scherr Química](./docs/comparacao-video.gif)
+![Walkthrough da home do site Scherr Química](./docs/walkthrough.gif)
 
 ---
 
@@ -46,8 +46,10 @@ O projeto foi desenvolvido priorizando desempenho, acessibilidade, organização
 - ✅ Seção de serviços
 - ✅ Seção Sobre
 - ✅ Informações de contato
-- ✅ Botões de chamada para ação (CTA)
+- ✅ Botões de chamada para ação (CTA) — primário preenchido e variante de contorno
 - ✅ Navegação fluida entre as seções
+- ✅ Microinterações de hover/foco em links, botões, listas, FAQ e formulário
+- ✅ Movimento que respeita `prefers-reduced-motion` (encurta a duração, sem tirar o retorno visual)
 - ✅ Interface moderna
 - ✅ Layout totalmente responsivo
 
@@ -80,14 +82,15 @@ Desenvolvido seguindo os princípios de **Responsive Web Design**, proporcionand
 ```text
 📦 site-scherr-quimica
 ├── assets/              # imagens, favicons e o CSS gerado pelo Tailwind (app.css)
-├── docs/                # material de apoio ao repositório (gif de demonstração)
+├── docs/                # material de apoio ao repositório (walkthrough.gif)
 ├── src/input.css        # entrada do build do Tailwind
 ├── index.html
 ├── privacidade.html      # rascunho de política de privacidade (LGPD)
 ├── 404.html              # página de erro customizada (GitHub Pages)
 ├── script.js
-├── style.css             # overrides manuais além do Tailwind
-├── tailwind.config.js
+├── style.css             # overrides manuais + camada de interação e movimento
+├── tailwind.config.js    # tokens da marca (verde/aço/âmbar), tipografia e escala
+├── CNAME · robots.txt · sitemap.xml · site.webmanifest
 └── README.md
 ```
 
@@ -137,8 +140,28 @@ Ctrl+C encerra os dois.
 ### Alterando estilos (Tailwind)
 
 O CSS não é gerado via CDN em tempo de execução — ele é compilado para `assets/app.css` e commitado no
-repositório, para o site continuar 100% estático no GitHub Pages. O Tailwind varre `./*.html` e `./*/*.html`
-(veja `tailwind.config.js`); uma classe usada em um arquivo fora desses padrões **não entra no CSS**.
+repositório, para o site continuar 100% estático no GitHub Pages. O Tailwind varre `./*.html`, `./*/*.html`
+e `./script.js` (veja `tailwind.config.js`); uma classe usada em um arquivo fora desses padrões **não entra
+no CSS**.
+
+Os tokens da marca ficam em `tailwind.config.js`: paleta **verde** (`#00A068`, amostrado do logo), **aço**,
+**âmbar** e **papel**; tipografia Archivo + IBM Plex Mono; escala modular de 1,25 sobre base de 17px;
+numerais tabulares em toda medição.
+
+### Interação e movimento
+
+Hover e foco de links, botões, linhas de lista, FAQ e campos do formulário ficam em `style.css`, num bloco
+próprio dividido de propósito em três partes:
+
+1. **Estado** — cor, fundo, opacidade, presença de marcas. Vale **sempre**, inclusive para quem pediu menos
+   movimento: reduzir movimento é não animar, não é ficar sem retorno visual.
+2. **Movimento** — transições, `transform` e animação (entrada do herói, varredura dos botões, etc.).
+3. **Menos movimento** (`prefers-reduced-motion: reduce`) — **encurta** a duração e desliga só o que
+   desloca ou escala de verdade; a mudança de cor e de estado continua.
+
+Os CTAs têm duas mecânicas distintas: o **primário** (`.acao-varre`) é preenchido por uma camada que desliza
+por trás do texto; o de **contorno** (`.acao-contorno`) levanta e acende sem preencher, para o par não ficar
+indistinguível sob o cursor.
 
 ### Páginas de serviço
 
@@ -167,17 +190,21 @@ As demais imagens em `assets/` vieram do projeto original; a origem não está r
 Vale confirmar a licença de cada uma antes de qualquer uso fora do site.
 
 
-O hero e os banners das seções de Serviços, Sobre e Parceiros usam fotos de banco gratuito
+O hero e os banners internos usam fotos de banco gratuito
 ([Pexels](https://www.pexels.com), licença livre para uso comercial, sem exigência de atribuição) como
 **placeholder genérico** — nenhuma delas retrata a fábrica, o laboratório ou a equipe reais da Scherr Química.
 Assim que houver fotos reais da empresa disponíveis, elas devem substituir esses arquivos em `assets/`:
 
-| Arquivo | Onde é usada |
+| Arquivo | Onde é usada hoje |
 |---|---|
-| `assets/hero-water-treatment.jpg` | Hero (topo da página) |
-| `assets/about-industrial-valves.jpg` | Fundo do card "Nossa missão" (Sobre) |
-| `assets/services-lab-testing.jpg` | Banner da seção Serviços |
-| `assets/partners-water-drop.jpg` | Banner da seção Parceiros |
+| `assets/hero-estacao-tratamento.jpg` | Hero da home (`#topo`) |
+| `assets/services-lab-testing.jpg` | Banners de Serviços e de Sobre (home) + hero de *Abrandadores e desmineralizadores* |
+| `assets/about-industrial-valves.jpg` | Hero de *Tratamento de água de caldeiras* e *Tratamento de óleo combustível* |
+| `assets/partners-water-drop.jpg` | Hero de *Torres de resfriamento* e *Água gelada* |
+| `assets/hero-water-treatment.jpg` | Hero de *Efluentes industriais* + imagem social (`og:image`/`twitter:image`/JSON-LD) da home |
+
+> A `og:image` da home ainda aponta para `hero-water-treatment.jpg`, que **não** é mais o hero visível
+> (trocado por `hero-estacao-tratamento.jpg` em `e2ddf04`). Ao pôr foto real, alinhar as duas.
 
 ---
 
@@ -187,11 +214,13 @@ Durante o desenvolvimento foram aplicadas boas práticas como:
 
 - HTML5 semântico
 - CSS moderno (Flexbox e Grid)
+- Design tokens da marca centralizados no `tailwind.config.js`
 - JavaScript para interatividade
+- Microinterações e movimento com `prefers-reduced-motion` respeitado
 - Design Responsivo (Mobile First)
 - Organização de arquivos
 - Código limpo e de fácil manutenção
-- Boas práticas de UI/UX
+- Boas práticas de UI/UX e acessibilidade (foco visível, hover em toque)
 - Versionamento com Git
 - Deploy utilizando GitHub Pages
 
@@ -199,7 +228,7 @@ Durante o desenvolvimento foram aplicadas boas práticas como:
 
 ## 👨‍💻 Desenvolvedor
 
-**Iago D'Ávila**
+**Iago d'Avila**
 
 📧 iago.davila.dev@gmail.com
 
