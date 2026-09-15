@@ -56,6 +56,14 @@ PAGES = [
    ("A Scherr fornece os equipamentos de dosagem?",
     "Sim. Tanques de dosagem, tanques de estocagem, bombas dosadoras, drenos e descargas automáticas podem ser fornecidos em regime de comodato. Também realizamos a montagem de laboratório com infraestrutura, aparelhagem e analista."),
  ],
+ "fornecimento_items": [
+   "Análise de água",
+   "Taxas de corrosão e deposição em corpos de prova de aço carbono, ligas de cobre e admiralty",
+   "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+   "Tanques, bombas dosadoras e descargas automáticas em regime de comodato",
+   "Montagem de laboratório na planta, com aparelhagem e analista",
+   "Transporte de produto e de pessoal operacional e técnico",
+ ],
 },
 {
  "slug": "tratamento-de-agua-de-torres-de-resfriamento",
