@@ -171,7 +171,7 @@ PAGES = [
    ("Por que fazer jar test antes de definir o produto?",
     "Porque cada efluente responde de forma diferente. O ensaio de bancada reproduz em escala reduzida a coagulação, a floculação e a sedimentação, e permite comparar produtos, dosagens e faixas de pH antes de aplicar na estação. É a forma mais barata de evitar tanto o subdimensionamento quanto a sobredosagem."),
    ("A Scherr acompanha a operação da estação ou só fornece produto?",
-    "Acompanhamos a operação. O monitoramento das estações de efluentes é feito em nível operacional e químico, com relatórios periódicos de avaliação e inspeções com registros fotográficos e filmagens. Também dispomos de laboratório químico próprio para as análises."),
+    "Acompanhamos a operação. O monitoramento das estações de efluentes é feito em nível operacional e químico, com relatórios periódicos de avaliação. Também dispomos de laboratório químico próprio para as análises."),
    ("O tratamento de efluentes permite reuso da água?",
     "Depende do efluente e do uso pretendido. O tratamento físico-químico é a etapa que remove sólidos, cor e boa parte da carga; a viabilidade do reuso depende do que resta em solução e do requisito de qualidade do ponto de consumo. Avaliamos essa possibilidade caso a caso, inclusive integrando com o circuito de resfriamento quando faz sentido."),
  ],
