@@ -5,6 +5,15 @@ from paginas_conteudo import PAGES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://scherr.com.br'
+
+FORNECIMENTO_PADRAO = [
+  "Análises de água, de depósito e contagem microbiológica em laboratório próprio",
+  "Taxas de corrosão e deposição em corpos de prova de aço carbono, ligas de cobre e admiralty",
+  "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+  "Tanques, bombas dosadoras e descargas automáticas em regime de comodato",
+  "Montagem de laboratório na planta, com aparelhagem e analista",
+  "Transporte de produto e de pessoal operacional e técnico",
+]
 ORG  = BASE + '/#organization'
 
 # Descricao institucional unica, a mesma usada no Perfil da Empresa no Google.
@@ -143,6 +152,10 @@ def build(page, others):
       '          <li class="border-b border-fio py-3 text-sm">%s</li>' % esc(i)
       for i in page['prod_items'])
 
+    fornecimento_lis = '\n'.join(
+      '        <li class="border-b border-fio py-3">%s</li>' % esc(i)
+      for i in page.get('fornecimento_items', FORNECIMENTO_PADRAO))
+
     result_cards = '\n'.join(
       '''      <div class="linha-spec border-b border-fio py-5">
         <dt class="font-semibold">%s</dt>
@@ -272,12 +285,7 @@ def build(page, others):
     <div>
       <h2 class="max-w-medida text-2xl font-bold">O que acompanha o fornecimento</h2>
       <ul class="mt-8 border-t-[3px] border-verde text-sm">
-        <li class="border-b border-fio py-3">Análises de água, de depósito e contagem microbiológica em laboratório próprio</li>
-        <li class="border-b border-fio py-3">Taxas de corrosão e deposição em corpos de prova de aço carbono, ligas de cobre e admiralty</li>
-        <li class="border-b border-fio py-3">Relatórios periódicos de avaliação e inspeções com registro fotográfico</li>
-        <li class="border-b border-fio py-3">Tanques, bombas dosadoras e descargas automáticas em regime de comodato</li>
-        <li class="border-b border-fio py-3">Montagem de laboratório na planta, com aparelhagem e analista</li>
-        <li class="border-b border-fio py-3">Transporte de produto e de pessoal operacional e técnico</li>
+{fornecimento_lis}
       </ul>
       <a href="/#servicos" class="mt-6 inline-block font-semibold text-verde-texto hover:underline">Ver todos os serviços</a>
     </div>
@@ -339,7 +347,8 @@ def build(page, others):
     h1=esc(page['h1']), lead=esc(page['lead']),
     problem_h2=esc(page['problem_h2']), problem_p=esc(page['problem_p']),
     problem_cards=problem_cards, how_h2=esc(page['how_h2']), how_steps=how_steps,
-    prod_h2=esc(page['prod_h2']), prod_lis=prod_lis, result_cards=result_cards,
+    prod_h2=esc(page['prod_h2']), prod_lis=prod_lis,
+    fornecimento_lis=fornecimento_lis, result_cards=result_cards,
     faq_items=faq_items, related=related,
     footer=FOOTER_TPL.format(footer_links=footer_links), whatsapp=WHATSAPP)
 

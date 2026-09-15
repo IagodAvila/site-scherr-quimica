@@ -27,7 +27,7 @@ PAGES = [
  "how_h2": "Como estruturamos o tratamento",
  "how_items": [
    ("Tratamento externo da água de alimentação", "Condicionamento da água antes da entrada na caldeira: abrandamento, desmineralização e remoção de dureza, sílica e matéria orgânica conforme a pressão de operação e a qualidade da água bruta disponível."),
-   ("Tratamento interno", "Dosagem de produtos químicos no interior do gerador de vapor para controlar dureza residual, sequestrar o oxigênio dissolvido, ajustar alcalinidade e pH e dispersar sólidos, mantendo-os em suspensão para remoção pelas descargas."),
+   ("Tratamento interno", "Dosagem de produtos químicos no interior do gerador de vapor para controlar dureza residual, sequestrar o oxigênio dissolvido, ajustar alcalinidade e pH e dispersar sólidos, mantendo-os em suspensão para a remoção pelas descargas de nível e o precipitado pela descarga de fundo."),
    ("Rede de vapor e condensado", "Proteção das linhas de retorno contra corrosão ácida por CO₂ e por oxigênio, preservando o condensado — que é água quente e de baixa condutividade, e portanto o insumo mais valioso do ciclo."),
    ("Controle analítico e ajuste de regime", "Definição das faixas de controle, rotina de análises, regime de descargas de fundo e de superfície e ajuste da dosagem conforme a carga real da caldeira."),
  ],
@@ -60,7 +60,7 @@ PAGES = [
 {
  "slug": "tratamento-de-agua-de-torres-de-resfriamento",
  "cod": "TORR",
- "params": "ciclos de concentração · UFC/mL · índice de saturação",
+ "params": "ciclos de concentração · UFC/mL · índice de saturação · incrustação · deposição · corrosão · crescimento microbiológico",
  "frase": "tratamento de água de torres de resfriamento",
  "icon": "droplets",
  "nav": "Torres de resfriamento",
@@ -81,7 +81,7 @@ PAGES = [
  ],
  "how_h2": "Como estruturamos o tratamento",
  "how_items": [
-   ("Diagnóstico do circuito e da água de reposição", "Levantamento da qualidade da água de reposição, dos materiais presentes no circuito, das temperaturas de pele e do balanço de massa da torre. É esse levantamento que define o ciclo de concentração viável."),
+   ("Diagnóstico do circuito e da água de reposição", "Levantamento da qualidade da água de reposição, dos materiais presentes no circuito, das temperaturas de película e do balanço de massa da torre. É esse levantamento que define o ciclo de concentração viável."),
    ("Programa de inibição de incrustação e corrosão", "Seleção de inibidores compatíveis com as ligas presentes e com a química da água, mantendo o índice de saturação sob controle sem exigir purga excessiva."),
    ("Controle microbiológico", "Programa de biocidas oxidantes e não oxidantes, com alternância planejada para evitar seleção de população resistente, e controle de biofilme."),
    ("Maximização dos ciclos de concentração", "Elevar o ciclo com segurança reduz diretamente a água de reposição e o volume de purga descartado. É onde está o maior ganho econômico e ambiental do programa."),
@@ -167,6 +167,12 @@ PAGES = [
    ("O tratamento de efluentes permite reuso da água?",
     "Depende do efluente e do uso pretendido. O tratamento físico-químico é a etapa que remove sólidos, cor e boa parte da carga; a viabilidade do reuso depende do que resta em solução e do requisito de qualidade do ponto de consumo. Avaliamos essa possibilidade caso a caso, inclusive integrando com o circuito de resfriamento quando faz sentido."),
  ],
+ "fornecimento_items": [
+   "Análise de água em laboratório próprio",
+   "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+   "Montagem de laboratório na planta, com aparelhagem e analista",
+   "Transporte de produto e de pessoal operacional e técnico",
+ ],
 },
 {
  "slug": "tratamento-de-agua-gelada",
@@ -221,6 +227,14 @@ PAGES = [
     "Sistemas parados exigem cuidado específico: água estagnada, sem circulação e sem renovação de inibidor, favorece corrosão e crescimento microbiológico. Existem aditivos e procedimentos de preservação para esse período. Vale definir isso antes da parada, não depois."),
    ("Vocês fazem limpeza química de fancoil e chiller?",
     "Sim. Executamos limpezas químicas em sistemas de compressores (fancoil), trocadores de calor, tubulações em geral, bombas, equipamentos e tanques."),
+ ],
+ "fornecimento_items": [
+   "Análises de água, de depósito e contagem microbiológica em laboratório próprio",
+   "Taxas de corrosão e deposição em corpos de prova de mesma metalurgia do sistema",
+   "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+   "Tanques, bombas dosadoras e descargas automáticas em regime de comodato",
+   "Montagem de laboratório na planta, com aparelhagem e analista",
+   "Transporte de produto e de pessoal operacional e técnico",
  ],
 },
 {
@@ -277,6 +291,12 @@ PAGES = [
    ("Vocês montam laboratório na planta do cliente?",
     "Sim. Realizamos a montagem de laboratório com toda a infraestrutura, aparelhagem em geral e analista, além de dispormos de laboratório químico próprio para as análises."),
  ],
+ "fornecimento_items": [
+   "Análise de água em laboratório próprio",
+   "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+   "Montagem de laboratório na planta, com aparelhagem e analista",
+   "Transporte de produto e de pessoal operacional e técnico",
+ ],
 },
 {
  "slug": "tratamento-de-oleo-combustivel",
@@ -331,6 +351,10 @@ PAGES = [
     "O enxofre do combustível forma SO₂ e SO₃ na queima. Quando os gases resfriam abaixo do ponto de orvalho ácido, o SO₃ combina com o vapor d'água e condensa como ácido sulfúrico sobre o metal — tipicamente em pré-aquecedores de ar, dutos e chaminé, que são as regiões mais frias. É a razão pela qual não se opera a temperatura de saída dos gases arbitrariamente baixa só para ganhar eficiência."),
    ("Como escolher o aditivo certo para o meu caso?",
     "Depende do problema predominante, do tipo de óleo e do sistema de queima. Nossa equipe técnica avalia o caso e indica o produto adequado — a linha cobre desde tratamento de tanque até controle de depósito e proteção contra corrosão ácida."),
+ ],
+ "fornecimento_items": [
+   "Relatórios periódicos de avaliação e inspeções com registro fotográfico",
+   "Transporte de produto e de pessoal operacional e técnico",
  ],
 },
 ]

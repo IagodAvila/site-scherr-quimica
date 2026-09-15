@@ -50,6 +50,9 @@ if (contactForm) {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const phone = form.phone.value.trim();
+    const company = form.company.value.trim();
+    const cnpj = form.cnpj.value.trim();
+    const role = form.role.value.trim();
     const message = form.message.value.trim();
 
     if (!name || !email || !message) {
@@ -58,7 +61,9 @@ if (contactForm) {
     }
 
     const subject = encodeURIComponent(`Contato do site - ${name}`);
-    const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\n\n${message}`);
+    const body = encodeURIComponent(
+      `Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nEmpresa: ${company}\nCNPJ: ${cnpj}\nFunção: ${role}\n\n${message}`
+    );
     window.location.href = `mailto:scherr@scherr.com.br?subject=${subject}&body=${body}`;
     showFeedback("Abrindo seu programa de email com a mensagem pronta.", "info");
   });

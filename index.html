@@ -341,7 +341,7 @@
       </div>
       <p class="mt-10 border-t border-sobre-verde-dim/30 pt-5 font-mono text-xs leading-relaxed text-sobre-verde-dim">
         O QUE MEDIMOS<br />O₂ dissolvido · pH · alcalinidade · condutividade · dureza · sílica ·
-        ciclos de concentração · contagem microbiológica · taxa de corrosão em corpo de prova
+        ciclos de concentração · contagem microbiológica · taxa de corrosão e deposição em corpo de prova
       </p>
     </div>
 
@@ -421,7 +421,7 @@
       </div>
       <div class="linha-spec border-b border-fio py-5">
         <dt class="text-lg font-semibold">Equipamentos em comodato</dt>
-        <dd class="mt-2 max-w-medida text-sm text-aco">Tanques de dosagem e de estocagem, bombas dosadoras, drenos e descargas automáticas.</dd>
+        <dd class="mt-2 max-w-medida text-sm text-aco">Tanques de dosagem e de estocagem, bombas dosadoras, drenos e descargas automáticas, abrandadores e desmineralizadores em comodato.</dd>
       </div>
       <div class="linha-spec border-b border-fio py-5">
         <dt class="text-lg font-semibold">Laboratório na planta</dt>
@@ -444,8 +444,8 @@
   <div class="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,380px)] lg:gap-16">
     <div>
       <h2 class="max-w-medida text-2xl font-bold">Mais de 30 anos cuidando da água da sua indústria</h2>
-      <p class="mt-5 max-w-medida text-aco">Sediada em Nova Lima, Minas Gerais, a Scherr atua desde 1993 com a visão da importância da água como recurso natural essencial. Somos referência em produtos químicos e serviços para o tratamento de águas industriais — caldeiras, torres de resfriamento, água gelada, desmineralizadores e efluentes.</p>
-      <p class="mt-4 max-w-medida text-aco">O diferencial está na combinação entre produtos de qualidade comprovada, laboratório químico próprio para análises e uma equipe técnica qualificada. É o laboratório que permite responder com número, e não com opinião, se o tratamento está funcionando.</p>
+      <p class="mt-5 max-w-medida text-aco">Sediada em Nova Lima, Minas Gerais, a Scherr atua desde 1993 com a visão da importância da água como recurso natural essencial. Somos referência em produtos químicos e serviços para o tratamento de águas industriais — caldeiras, torres de resfriamento, água gelada e efluentes.</p>
+      <p class="mt-4 max-w-medida text-aco">O diferencial está no desenvolvimento de fórmulas específicas e na combinação entre produtos de qualidade comprovada, laboratório químico próprio para análises e uma equipe técnica qualificada. É o laboratório que permite responder com número, e não com opinião, se o tratamento está funcionando.</p>
       <div class="zoom-suave mt-8"><img src="assets/services-lab-testing.jpg" alt="Amostras de água em análise no laboratório da Scherr" width="1600" height="480" loading="lazy" class="h-52 w-full object-cover sm:h-64" /></div>
     </div>
     <div class="border-t-[3px] border-verde">
@@ -537,6 +537,20 @@
           <div>
             <label for="contactName" class="font-mono text-xs text-aco">NOME *</label>
             <input id="contactName" name="name" maxlength="100" required class="mt-2 w-full border border-fio-forte bg-superficie px-4 py-3 focus:border-verde focus:outline-none" />
+          </div>
+          <div>
+            <label for="contactCompany" class="font-mono text-xs text-aco">EMPRESA</label>
+            <input id="contactCompany" name="company" maxlength="100" class="mt-2 w-full border border-fio-forte bg-superficie px-4 py-3 focus:border-verde focus:outline-none" />
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="contactCnpj" class="font-mono text-xs text-aco">CNPJ</label>
+              <input id="contactCnpj" name="cnpj" maxlength="18" class="mt-2 w-full border border-fio-forte bg-superficie px-4 py-3 focus:border-verde focus:outline-none" />
+            </div>
+            <div>
+              <label for="contactRole" class="font-mono text-xs text-aco">FUNÇÃO</label>
+              <input id="contactRole" name="role" maxlength="100" class="mt-2 w-full border border-fio-forte bg-superficie px-4 py-3 focus:border-verde focus:outline-none" />
+            </div>
           </div>
           <div class="grid gap-5 sm:grid-cols-2">
             <div>
