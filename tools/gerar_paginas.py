@@ -26,8 +26,8 @@ def esc(t):
 
 HEADER = '''<header class="sticky top-0 z-50 border-b border-fio bg-papel/95 backdrop-blur">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-    <a href="/" class="flex items-center" aria-label="Scherr Química - Início">
-      <img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-11 w-auto" />
+    <a href="/" class="flex items-center" aria-label="Scherr Acqua - Início">
+      <img src="/assets/logo-scherr-horizontal.png" alt="Scherr Acqua" width="640" height="276" class="h-12 w-auto" />
     </a>
     <nav class="hidden items-center gap-7 text-sm font-medium lg:flex">
       <a href="/#areas-atuacao" class="header-nav-link">Áreas de atuação</a>
@@ -58,7 +58,7 @@ FOOTER_TPL = '''<footer class="bg-verde-fundo text-sobre-verde">
   <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
     <div class="grid gap-10 md:grid-cols-3">
       <div>
-        <div class="inline-flex bg-white p-2"><img src="/assets/logo-scherr-horizontal.png" alt="Scherr Química" width="738" height="220" class="h-10 w-auto" /></div>
+        <img src="/assets/logo-scherr-horizontal-negativo.png" alt="Scherr Acqua" width="640" height="276" class="h-16 w-auto" />
         <p class="mt-5 max-w-xs text-sm text-sobre-verde-dim">Tratamento de água industrial desde 1993. Sede em Nova Lima, MG.</p>
       </div>
       <div>
@@ -102,7 +102,7 @@ def build(page, others):
 
     ld = {"@context": "https://schema.org", "@graph": [
       {"@type": ["LocalBusiness", "ProfessionalService"], "@id": ORG,
-       "name": "Scherr Química Ltda", "alternateName": "Scherr", "url": BASE + "/",
+       "name": "Scherr Química Ltda", "alternateName": "Scherr Acqua", "url": BASE + "/",
        "image": BASE + "/assets/logo-scherr-horizontal.png",
        "logo": BASE + "/assets/logo-scherr-horizontal.png",
        "telephone": "+55 31 3297-6161", "email": "scherr@scherr.com.br",
@@ -206,7 +206,6 @@ def build(page, others):
 <meta name="twitter:title" content="{title}" />
 <meta name="twitter:description" content="{desc}" />
 <meta name="twitter:image" content="{base}/assets/{img}" />
-<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16" />
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
